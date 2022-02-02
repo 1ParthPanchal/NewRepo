@@ -1,0 +1,12 @@
+NewRepo = https://github.com/1ParthPanchal/NewRepo.git
+
+Todays Work:
+push
+pull
+stash
+stage
+commit
+conflict
+merge
+
+Complete FLowcharts
