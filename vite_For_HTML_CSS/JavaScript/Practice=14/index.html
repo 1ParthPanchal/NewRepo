@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../dist/output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Area and Perimeter of a circle</title>
+</head>
+
+<body>
+    <script>
+        function circle(radius) {
+            this.radius = radius;
+            // area method
+            this.area = function() {
+                return Math.PI * this.radius * this.radius;
+            };
+            // perimeter method
+            this.perimeter = function() {
+                return 2 * Math.PI * this.radius;
+            };
+        }
+        var c = new circle(3);
+        document.write('Area =', c.area().toFixed(2));
+        document.write("<br>");
+        document.write('perimeter =', c.perimeter().toFixed(2));
+    </script>
+
+</body>
+
+</html>

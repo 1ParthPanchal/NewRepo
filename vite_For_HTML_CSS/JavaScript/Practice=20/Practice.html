@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body class="bg-info">
+<table class="table-bordered table bg-white" style="margin-top: 12%;">
+<th>
+<tr class="font-extrabold">
+<td>Name</td>
+<td>Price</td>
+<td>Location</td>
+</tr>
+</th>
+<tbody id="person">
+</tbody>
+</table>
+
+<script type="text/javascript">
+[
+person = [
+{
+"name": "Cheese",
+"price": "2.50",
+"location" : "Refrigerated foods"
+},{
+    "name": "Crips",
+"price": "3",
+"location" : "the Snack isle"
+},
+{
+  "name" : "Pizza",
+  "price" : "4",
+  "location" : "Refrigerated foods"
+},
+{
+    "name" : "Chocalate",
+  "price" : "1.50",
+  "location" : "the Snack isle"
+},
+{
+    "name" : "Self - Rising Flour",
+  "price" : "1.50",
+  "location" : "Home baking"
+},
+{
+    "name" : "Ground almonds",
+  "price" : "3",
+  "location" : "Home baking"
+}
+]
+]
+
+var i;
+var data = "";
+for (i = 0; i < person.length; i++) {
+data += "<tr> <td>" + person[i].name + "</td> <td>" + person[i].price + "</td> <td>" + person[i].location+ "</td> </tr>";
+}
+document.getElementById('person').innerHTML = data;
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Hide/Show</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>There is one Hide/show the text inside the #helpText span element when the user’s mouse passes over the text</h1>
+        <hr>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="p-2 border border-danger " id="data">
+                    <h4 class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, provident obcaecati vitae veritatis placeat dignissimos ad eligendi tempore labore aut eum aperiam voluptas ipsum ab natus architecto nisi mollitia laborum.</h4>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="my-2">
+                    <div class="button btn btn-success" id="show">Hover to show</div>
+                    <div class="button btn btn-danger" id="hide">Hover to hide</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $("#data").mouseenter(function() {
+                $("#data").hide();
+            });
+            $("#data").mouseleave(function() {
+                $("#data").show();
+            });
+            $("#hide").mouseenter(function() {
+                $(".data").hide();
+            });
+            $("#show").mouseenter(function() {
+                $(".data").show();
+            });
+        });
+    </script>
+</body>
+
+</html>

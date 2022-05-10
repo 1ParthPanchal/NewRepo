@@ -1,0 +1,29 @@
+*{
+    background-color: blue;
+}
+.nav-items{
+    background-color: black;
+
+}
+.nav-link{
+    color: white;
+    font-size: larger;
+}
+/*body{
+    border: 0ch solid blueviolet;
+    background-color: whitesmoke;
+}*/
+.para{
+    border: 50px double black;
+    background-color: white;
+    color: black;
+    
+}
+.list-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list-container ul {
+    width: 25%;
+}

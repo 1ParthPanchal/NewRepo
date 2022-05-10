@@ -1,0 +1,55 @@
+       .nav-items {
+           background-color: rgb(49, 196, 196);
+       }
+       
+       .nav-link {
+           color: black;
+           font-size: larger;
+           align-items: right;
+       }
+       
+       .nav-link:hover {
+           color: aqua;
+       }
+       
+       .html ul li {
+           color: #000;
+           list-style-type: square;
+           display: inline-block;
+       }
+       
+       .html ul li ul li {
+           color: #000;
+           list-style-type: square;
+           display: flex;
+       }
+       
+       .css ul li {
+           color: #000;
+           list-style-type: square;
+       }
+       
+       .css ul li ul li {
+           color: white;
+           list-style-type: square;
+           display: flex;
+       }
+       
+       .html {
+           width: 100%;
+           border: 1px solid gold;
+           background-color: aquamarine;
+           color: blue;
+           margin-left: 45%;
+       }
+       
+       .css {
+           margin-left: 50%;
+           background-color: #000;
+           color: white;
+           width: 75%;
+       }
+       
+       .project {
+           display: inline-flex;
+       }

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promis-Practice</title>
+</head>
+<body>
+    <script>
+        function dostuff(data){
+            return new Promise((resolve,reject)=>{
+                let successMessage={
+                    status:"success",
+                    message:"All is Well"
+                };
+                let errorMessage={
+                    status:'error',
+                    message:'Opps,there was an error'
+                }
+                if(typeof(data === 'boolean') && dta === true)
+                {
+                    resolve(successMessage);
+                }
+                else{
+                    reject(errorMessage);
+                }
+
+            })
+        };
+        dostuff(true).then
+        (
+            (successMessage)=>{
+            document.write(successMessage.status)
+          },
+          (errorMessage) => {
+            document.write(errorMessage.status)
+           }
+        );
+        
+    </script>
+</body>
+</html>

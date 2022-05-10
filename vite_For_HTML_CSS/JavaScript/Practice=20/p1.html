@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form enctype="multipart/form-data" action="" method="post">
+        <button type="submit" name="submit" id="Submit" value="click" onClick = getEarnings()>Click </button>
+    </form>
+    
+    <table>
+      <th>
+        <tr">
+            <th>Reported Date</th>
+            <th>Reported EPS</th>
+            <th>Estimated EPS</th>
+            <th>Surprise</th>
+        </tr>
+      </th>
+      <tbody id="myData"><tbody>
+    </table>
+    
+    <script>
+    /* function getEarnings() { */
+        fetch('Api.json')
+          .then(res => {return res.json()})
+          .then(Products =>
+             {
+                 console.log(Products);
+                alert("I am here"); // I can't see it if from function
+
+                let jsonData = JSON.parse(Products);
+                for (let i = 0; i < jsonData.length; i++)
+                 {
+                    let earnings = Products[i];
+                    document.getElementById("myData").innerHTML +=
+                    "<tr><td>" + jsonData[i].Name + "</td>" +
+                    "<td align='right'>" + jsonData[i].Price + "</td>" +
+                    "<td align='right'>" + jsonData[i].Location + "</td>" +
+                    "<td align='right'>" + jsonData[i].surprise + "</td></tr>";
+                    
+                 };
+             })
+
+             
+/* } */
+</script>
+</body>
+</html>

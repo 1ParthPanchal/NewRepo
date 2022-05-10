@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../dist/output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Promise</title>
+</head>
+
+<script>
+    function Disp(y) {
+        document.getElementById("demo").innerHTML = y;
+    }
+
+
+    function myFunction(x) {
+        return new Promise(function(res, err) {
+            setTimeout(() => {
+
+                if (typeof(x.value) == "string" && x.value != "") {
+
+                    console.log(typeof(x.value));
+                    var str = x.value.split("");
+                    var rstr = str.reverse();
+                    var ans = rstr.join("");
+                    alert("valid");
+                    res(ans);
+                    if (str.indexOf(' ') >= 0) {
+
+                        alert("String have white space");
+
+                    }
+                } else {
+                    err("Invalid");
+                }
+            }, 500);
+        })
+    }
+</script>
+
+<body class="bg-lime-200">
+    <div class="mt-48 bg-slate-800 items-center border-8 border-yellow-400">
+                <h1 class="text-sky-200 text-xl text-center">Promise String </h1>
+                <input type="text" id="str" name="str" class="item-center">
+                <button onclick="myFunction(str).then((a)=>{Disp(a)}).catch((a)=>{Disp(a); })" class="border-2 border-blue-500 text-yellow-200 text-center"> Check  Input</button>
+                <p id="demo"></p>
+        </div>
+</body>
+
+</html>

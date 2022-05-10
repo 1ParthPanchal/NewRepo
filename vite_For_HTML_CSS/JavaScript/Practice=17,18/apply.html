@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../dist/output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>JS=Practice=17,18</title>
+</head>
+
+<body class="bg-violet-400">
+    <div class="text-2xl text-black-800 font-bold ">
+        <h3>Using Function call create employee object with field Name, Address and Designation and pass it to function.</h3>
+
+        <h3>Using Function Apply pass employee object to a function defined in the function</h3>
+    </div>
+    <div  class="border-8 bg-lime-300">
+    <p id="demo" class=" text-xl text-blue-500 mt-10"></p>
+    <p id="Demo" class="mt-36 text-xl text-sky-800"></p>
+    </div>
+    <script class="mt-36 border-8 bg-gray-300">
+        const person = {
+            fullName: function() {
+                return "Name : " + this.FirstName + " " + this.LastName + " " + "<br>" + "Address : " + this.Address + " " + "<br>" + "Designation : " + this.Designation;
+            }
+        }
+        const person1 = {
+            FirstName: "Parth",
+            LastName: "Panchal",
+            Address: "Mathiya Chora , Darji Faliyu , Near Tower Bazzar , Anand-388001",
+            Designation: "Dot Net Trainee"
+        }
+
+        const person2 = {
+            FirstName: "Krutik",
+            LastName: "Panchal",
+            Address: "Mathiya Chora , Darji Faliyu , Near Tower Bazzar , Anand-388001",
+            Designation: "Dot Net Trainee"
+        }
+
+
+        document.getElementById("demo").innerHTML = person.fullName.apply(person1);
+        document.write("<br>");
+        document.getElementById("Demo").innerHTML = person.fullName.apply(person2);
+    </script>
+
+</body>
+
+</html>

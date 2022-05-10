@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<button onclick="callProducer()">Submit</button>
+	<script>
+		function callProducer(){
+            alert("Start from here");
+            Api = { 
+    "Products": 
+        [
+            {
+                "Name": "Cheese",
+                "Price": "2.50",
+                "Location": "Refrigerated foods"
+            
+            },
+            {
+                "Name": "Crips",
+                "Price": "3",
+                "Location": "the Snack isle"
+            },
+            {
+                "Name": "Pizza",
+                "Price": "4",
+                "Location": "Refrigerated foods"
+            },
+            {
+                "Name": "Chocalate",
+                "Price": "1.50",
+                "Location": "the Snack isle"
+            },
+            {
+                "Name": "Self-raising flour",
+                "Price": "1.50",
+                "Location": "Home baking"
+            },
+            {
+                "Name": "Ground almonds",
+                "Price": "3",
+                "Location": "Home baking"
+            }
+        ]
+};
+
+        localStorage.setItem('added items' , JSON.stringify(Api));
+        var retrivedObject = localStorage.getItem('added items');
+        var data= JSON.parse(retrivedObject).Products;
+        console.log(data.length);
+        for (const key in data) {
+            document.write(data[key].Name+" "+ " "+data[key].Price + " "+ " " +data[key].Location+ " ");
+        }
+}
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" integrity="sha512-Velp0ebMKjcd9RiCoaHhLXkR1sFoCCWXNp6w4zj1hfMifYB5441C+sKeBl/T/Ka6NjBiRfBBQRaQq65ekYz3UQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+        
+        .navbar {
+            font-size: 14px;
+            text-transform: uppercase;
+            padding-left: 1em !important;
+            padding-right: 1em !important;
+        }
+        
+        .nav-link {
+            font-size: 14px;
+            text-transform: uppercase;
+            padding-left: 1em !important;
+            padding-right: 1em !important;
+        }
+        
+        .nav-item.active {
+            border-left: #444 3px solid;
+        }
+        
+        .carousel-item {
+            height: 450px;
+        }
+        
+        .carousel-image-1 {
+            background-image: url("/img/1.jpeg");
+            background-size: cover;
+        }
+        
+        .carousel-image-2 {
+            background-image: url("/img/2.jpeg");
+            background-size: cover;
+        }
+        
+        .carousel-image-3 {
+            background-image: url("/img/3.jpeg");
+            background-size: cover;
+        }
+        
+        .fa {
+            font-size: 55px;
+        }
+        
+        #home-heading {
+            position: relative;
+            min-height: 200px;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            text-align: center;
+            color: #fff;
+        }
+        
+        .dark-overlay {
+            position: absolute;
+            background-color: rgb(0, 0, 0, 0.7);
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+        }
+        
+        #video-play {
+            position: relative;
+            min-height: 200px;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: 0, 300px;
+            text-align: center;
+            color: #fff;
+        }
+        
+        #video-play.a {
+            color: #fff;
+        }
+        
+        footer#main-footer {
+            background: #000;
+            color: #fff;
+        }
+        
+        #page-header {
+            height: 200px;
+            background-image: url(/img/1.jpeg);
+            background-position: 0, 360px;
+            background-attachment: fixed;
+            color: #fff;
+            border-bottom: 1px #eee solid;
+            padding-top: 50px;
+        }
+        
+        #about.img {
+            margin-top: -50px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a href="blozzom.html" class="navbar-brand">Glozzom</a>
+            <button class="navbar-toggler" data-bs-toggle="copllapse" data-bs-target="#navbarNav"><span class="navbar-toggle"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="glozzom.html" class="nav-link ">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link active">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="services.html" class="nav-link">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="blog.html" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header id="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 m-auto text-center">
+                    <h1>About Us</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, maiores.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!----------About Section ------------>
+    <section id="about" class="py-3">
+        <div class="container">
+            <div class="row">
+                <div class="con-md-6">
+                    <h1>What We Do</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil molestias eius labore id porro fugiat minus rerum ut eaque, blanditiis aspernatur repellendus nostrum ducimus cumque, facilis quod dolores quisquam impedit?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas iusto officia autem, qui eveniet unde omnis illum sed rerum libero delectus quia natus optio. Laudantium ipsam sed odit? Quam, asperiores.</p>
+                </div>
+                <div class="col-md-6 d-none">
+                    <img src="https://placebeard.it/640x360" alt="" class="about-img img-fluid rounded-circle">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!----------ICON BOXES--------------------------------->
+    <section id="icon-boxes" class="p-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <div class="card bg-danger text-center text-white">
+                        <div class="card-body">
+                            <em class="fa fa-building">
+                                <h3>Lorem ipsum</h3>
+                            </em>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="main-footer" class="text-center p-4">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p>CopyRight 2022 &copy; Glozzom</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudfl-are.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js" integrity="sha512-Y2IiVZeaBwXG1wSV7f13plqlmFOx8MdjuHyYFVoYzhyRr3nH/NMDjTBSswijzADdNzMyWNetbLMfOpIPl6Cv9g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>

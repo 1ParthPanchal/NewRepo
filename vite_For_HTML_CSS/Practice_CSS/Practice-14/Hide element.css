@@ -1,0 +1,44 @@
+div.hide {
+  background-color: red;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+}
+h1 {
+  background-color: aqua;
+  color: aliceblue;
+  text-align: center;
+  padding: 10px;
+  font-size: 50px;
+}
+p {
+  background-color: blue;
+  font-size: 25px;
+  padding-left: 30px;
+}
+@media screen and (min-width: 550px) {
+  h1 {
+    font-size: 80px;
+    color: blue;
+  }
+}
+@media screen and (min-width:550px) {
+  p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: aqua;
+    background-color: black;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  h1 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  div.hide {
+    display: none;
+  }
+}

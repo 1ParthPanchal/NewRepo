@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+
+</head>
+
+<body>
+    <h1>Employee Details</h1>
+    <form action="#" id="myform" onsubmit=" validation()">
+        <label for="Userid">Employee ID:</label>
+        <input type="number" name="id" id="ID" placeholder="Enter your ID">
+        <span id="Userid" style="color: red;"></span>
+        <br>
+        <br>
+        <label for="Username">Employee name:</label>
+        <input type="text" name="user" id="name" placeholder="Enter your Name">
+        <span id="username" style="color: red;"></span>
+        <br>
+        <br>
+        <label for="Age">Age:</label>
+        <input type="number" name="age" id="age" placeholder="Enter your Age"><br>
+        <span id="Age"></span>
+        <br>
+        <br>
+        <label for="Gender">Select Gender:</label>
+        <input type="radio" name="Male" id="Male">
+        <label for="Male">Male</label>
+        <input type="radio" name="Female" id="Female">
+        <label for="Female">Female</label>
+        <input type="radio" name="Other" id="Other">
+        <label for="Other">Other</label><br>
+        <br>
+        <label for="Designation">Designation of Employee:</label>
+        <input type="text" name="Designation" id="Designation" placeholder="Enter Designation "><br>
+        <br>
+        <label for="Salary">Salary of Employee:</label>
+        <input type="number" name="salary" id="salary" placeholder="Enter Salary"><br>
+        <br>
+        <label for="Location">Location of Employee:</label>
+        <select name="Location" id="Location">
+                <option value="Anand">Anand</option>
+                <option value="Ahemdabad">Ahemdabad</option>
+                <option value="Vadodara">Vadodara</option>
+                <option value="Rajkot">Rajkot</option>
+                <option value="Surat">Surat</option>
+                <option value="Kutchh">Kutchh</option>
+              </select><br>
+        <br>
+        <label for="Email-ID">Email-ID of Employee:</label>
+        <input type="Email" name="Email" id="Email-ID" placeholder="Enter your Email-ID">
+        <span id="email"></span>
+        <br>
+        <br>
+        <label for="Date">Joining of Employee:</label>
+        <input type="date" name="Date" id="Date">
+        <br>
+        <br>
+        <label for="Contact Number">Contact Number of Employee:</label>
+        <input type="tel" name="Contact Number" id="Contact Number">
+        <br>
+        <br>
+        <input type="submit" name="submit" onclick="validation()" value="submit">
+        <br>
+        <br>
+        <input type="button" value="Reset" onclick="reset()">
+    </form>
+
+    <script>
+        function validation() {
+            var id = document.getElementById("ID").value;
+            var user = document.getElementById("name").value;
+            var age = document.getElementById("age").value;
+            var Email = document.getElementById("Email-ID").value;
+
+
+            if (id.lenght == 0) {
+                document.getElementById("UserID").innerHTML = "Please enter UserID";
+                return false;
+            } else if (user == "") {
+                document.getElementById("username").innerHTML = "Please enter useername";
+                return false;
+            } else if (age == null) {
+                document.getElementById("age").innerHTML = "Please enter Age";
+                return false;
+            } else if (Email == "") {
+                document.getElementById("Email-ID").innerHTML = "Please enter Email-ID";
+                return false;
+            } else {
+                alert("Your Details Successfully Stored");
+            }
+        }
+
+        function reset() {
+            document.getElementById('myform').reset();
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="../../../../bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <title>JS-Practice=3</title>
+    
+</head>
+
+<body class="bg-info" >
+    <form action="" id="form" class="align-content-center bg-white border-8 h-36" style="margin-top: 14%; height: 36%; width: 40%; margin-left: 30%;">
+        <div class="float-center mx-lg-4 border border-dark align-content-center">
+            <h1>String is blank or not</h1>
+            <label for="string">Please Enter String</label><br>
+            <input type="text" name="string" id="str" placeholder="Enter String">
+            <input type="button" value="Submit" onclick=" compare()">
+            <input type="button" value="reset" onclick="reset()">
+       </div>
+    </form>
+    <script>
+        function compare() {
+            var s1 = document.getElementById('str').value;
+            if (s1.length == 0 || s1.length == null) {
+                alert("string is empty or null");
+            } else if (s1.indexOf(' ') >= 0) {
+
+                alert("String have white space");
+
+            } else {
+                alert("string have " + s1.length + " alphabets")
+            }
+        }
+
+        function reset() {
+            document.getElenentById('str').reset();
+        }
+    </script>
+</body>
+
+</html>

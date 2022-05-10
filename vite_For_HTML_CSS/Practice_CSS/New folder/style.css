@@ -1,0 +1,12 @@
+.nav-items{
+    background-color: black;
+    color: white;
+}
+.nav-link{
+    color : white;
+}
+.image{
+    box-sizing: border-box;
+    border:1px solid yellow;
+    margin-top: 100;
+}

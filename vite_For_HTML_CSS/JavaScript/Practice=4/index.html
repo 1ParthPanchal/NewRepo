@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>JS-Practice=4</title>
+</head>
+
+<body class="bg-info" >
+    <form action="" id="form"  class="align-content-center bg-white border-8 h-36" style="margin-top: 14%; height: 36%; width: 40%; margin-left: 30%;">
+        <h1>String </h1>
+        <label for="string">Please Enter String</label><br>
+        <input type="text" name="string" id="demo" placeholder="Enter String">
+        <input type="button" value="Submit" onclick="split()">
+        <input type="button" value="reset" onclick="reset()">
+    </form>
+    <p id="demo"></p>
+
+    <script>
+        const str = document.getElementById('demo').value;
+
+        function split() {
+            const str = document.getElementById('demo').value;
+            const word = str.split();
+            if (str.length == 0 || str.length == null) {
+                alert("string is empty or null");
+            } else if (!isNaN(str)) {
+                alert("Number is Not Allowed");
+            } else {
+                alert(" " + word);
+            }
+
+        }
+
+        function reset() {
+            document.getElenentById('demo').reset();
+        }
+    </script>
+</body>
+
+</html>

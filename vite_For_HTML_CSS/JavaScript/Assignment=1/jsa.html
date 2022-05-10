@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../dist/output.css">
+    <title>calculator</title>
+    <style>
+        input,
+        label,
+        button {
+            margin: 5px;
+        }
+    </style>
+    <script>
+        function calculate(a, b) {
+            n1 = parseInt(a);
+            n2 = parseInt(b);
+            console.log(n1);
+
+            if (isNaN(n1) || isNaN(n2)) {
+                alert("must enter a number");
+            } else {
+                function dispradio() {
+                    var sel = document.getElementsByName('operations');
+
+                    for (i = 0; i < sel.length; i++) {
+                        if (sel[i].checked) {
+                            return sel[i].value
+                        }
+                    }
+                }
+
+                let operations = dispradio();
+                console.log(operations);
+                if (operations == "add") {
+                    document.getElementById("ans").value = n1 + n2
+                } else if (operations == "sub") {
+                    document.getElementById("ans").value = n1 - n2
+                } else if (operations == "mul") {
+                    document.getElementById("ans").value = n1 * n2
+                } else if (operations == "div") {
+                    document.getElementById("ans").value = n1 / n2
+                } else {
+                    document.getElementById("ans").value = "someting went wrong"
+
+                }
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1 class="text-center font-extrabold text-2xl">Use this of basic calculation</h1><br>
+    <div id="main">
+        <form action="" id="myForm" class="text-center  border-black border-4 bg-green-400">
+            <label for="n1" class="text-black font-bold">Please Enter First Number </label><br>
+            <input type="text" name="n1" id="n1" class=" border-black border-4  "><br>
+            <label for="n2">Please Enter Second Number </label><br>
+            <input type="text" name="n2" id="n2" class=" border-black border-4"><br>
+            <label for="radio">Please Select Operation You want to perform</label><br>
+            <input type="radio" id="add" class="operation" name="operations" value="add">
+            <label for="add">Add</label><br>
+            <input type="radio" id="sub" class="operation" name="operations" value="sub">
+            <label for="sub">Sub</label><br>
+            <input type="radio" id="mul" class="operation" name="operations" value="mul">
+            <label for="mul">Multiplication</label><br>
+            <input type="radio" id="div" class="operation" name="operations" value="div">
+            <label for="div">Division</label><br>
+
+
+            <button input="submit" class="cal  text-center border-black border-4 " id="cal" onclick="calculate(n1.value,n2.value)">Calculate</button>
+            <button class="reset " id="reset" onclick="resets()">Reset</button>
+            <br>
+
+            <label for="ans">The Answer is </label><br>
+            <input type="text" name="ans" id="ans" class=" border-black border-4"><br>
+        </form>
+    </div>
+</body>
+
+</html>

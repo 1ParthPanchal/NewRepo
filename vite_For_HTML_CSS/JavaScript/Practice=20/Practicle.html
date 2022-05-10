@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+<title>Document</title>
+</head>
+
+<body class="bg-blue">
+    <form enctype="multipart/form-data" action="" method="post">
+        <button type="submit" name="submit" id="Submit" value="click" onClick = getEarnings()>Click </button>
+    </form>
+    
+    <table class="table-bordered table bg-white">
+      <th>
+        <tr>
+            <th>Reported Date</th>
+            <th>Reported EPS</th>
+            <th>Estimated EPS</th>
+            <th>Surprise</th>
+        </tr>
+      </th>
+      <tbody id="myData"></tbody>
+    </table>
+    
+    <script>
+    /* function getEarnings() { */
+        fetch('Api.json')
+          .then(res => res.json())
+          .then((Products) =>
+             {
+                alert("I am here"); // I can't see it if from function
+                var i;
+                var data = "";
+                for (let i = 0; i < 6; i++)
+                 {
+                    
+                    document.getElementById("myData").innerHTML = data;
+                    data += "<tr><td>" + Products.products[i].Name + "</td>" +
+                    "<td>" + Products.products[i].Price + "</td>" +
+                    "<td>" + Products.products[i].Location + "</td></tr>"
+                 };
+             })
+          .catch(err => console.error(err));
+    /* } */
+    </script>
+    javascript
+    json
+    fetch()
+    
+</body>
+
+</html>

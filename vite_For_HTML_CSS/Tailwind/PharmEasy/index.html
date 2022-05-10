@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./TW-ELEMENTS-PATH/dist/js/index.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="../../dist/output.css">
+
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" integrity="sha512-8Vtie9oRR62i7vkmVUISvuwOeipGv8Jd+Sur/ORKDD5JiLgTGeBSkI3ISOhc730VGvA5VVQPwKIKlmi+zMZ71w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css" integrity="sha512-6/gTF62BJ06BajySRzTm7i8N2ZZ6StspU9uVWDdoBiuuNu5rs1a8VwiJ7skCz2BcvhpipLKfFerXkuzs+npeKA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <title>PharmEasy</title>
+    <style>
+        .carousel-open:checked+.carousel-item {
+            position: static;
+            opacity: 100;
+        }
+        
+        .carousel-item {
+            -webkit-transition: opacity 0.6s ease-out;
+            transition: opacity 0.6s ease-out;
+        }
+        
+        #carousel-1:checked~.control-1,
+        #carousel-2:checked~.control-2,
+        #carousel-3:checked~.control-3,
+        #carousel-4:checked~.control-4,
+        #carousel-5:checked~.control-5,
+        #carousel-6:checked~.control-6,
+        #carousel-7:checked~.control-7 {
+            display: block;
+        }
+        
+        .carousel-indicators {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            bottom: 2%;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 10;
+        }
+        
+        #carousel-1:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
+        #carousel-2:checked~.control-2~.carousel-indicators li:nth-child(2) .carousel-bullet,
+        #carousel-3:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet,
+        #carousel-4:checked~.control-4~.carousel-indicators li:nth-child(4) .carousel-bullet,
+        #carousel-5:checked~.control-5~.carousel-indicators li:nth-child(5) .carousel-bullet,
+        #carousel-6:checked~.control-6~.carousel-indicators li:nth-child(6) .carousel-bullet,
+        #carousel-7:checked~.control-7~.carousel-indicators li:nth-child(7) .carousel-bullet {
+            color: #2b6cb0;
+            /*Set to match the Tailwind colour you want the active one to be */
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav style="background-color: #10847e;" class="sticky top-0 overflow-hidden z-10 ">
+        <div class="lg:w-full md:w-full sm:w-full grid grid-cols-1">
+            <div class="img">
+                <img src="./img/logo.png" alt="" class="lg:w-40 lg:block md:block sm:hidden md:w-40 sm:w-1">
+            </div>
+            <div class="search  ml-60">
+                <div class="search-container  d-flex ml-10 grid grid-cols-3 -mt-20 ">
+                    <button id="dropdownButton" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 w-20 ml-20 overflow:hidden"
+                        target="dropdownButton" type="button">Select Pincode<svg class=" w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+
+                    <!-- Dropdown menu -->
+                    <div id="dropdownButton" class="hidden z-10 w-0 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+                        <ul class="py-1" aria-labelledby="dropdownButton">
+                            <li>
+                                <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">388001</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">382415</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">382435</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">388001</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <input class="w-100px -ml-60" type="text" placeholder="Search Medicines/HealthCares Products @18% off" name="search">
+                    <button type="submit"><strong class="-ml-80"> Search</strong></button>
+                </div>
+            </div>
+        </div>
+        <div class=" sm:grid sm:grid-cols-1 lg:grid lg:grid-cols-3 md:grid md:grid-cols-3 ml-80">
+
+            <ul class="flex  text-white -ml-10  ">
+                <li class="hover:bg-red px-2">
+                    <a href="#" class="text-white hover:bg-red-500 active hover:shadow-xl hover:underline">Dashboard</a>
+                </li>
+                <li class="hover:bg-red px-2">
+                    <a href="#" class="text-white hover:bg-red-500  hover:underline">Post</a>
+                </li>
+                <li class="hover:bg-red px-2">
+                    <a href="#" class="text-white hover:bg-red-500  hover:underline">Categories</a>
+                </li>
+                <li class="hover:bg-red px-2">
+                    <a href="#" class="text-white me-5 hover:bg-red-500 hover:underline">Users</a>
+                </li>
+            </ul>
+
+
+            <div class=" flex mx-80 ">
+                <div class="nav-item px-2">
+                    <a href="#" class="text-white  flex hover:bg-red-500 hover: shadow-xl hover:underline"><em class="fa-solid fa-badge-percent"></em> Offers</a>
+                </div>
+                <div class="nav-item px-2">
+                    <a href="#" class="text-white flex  hover:bg-red-500 hover: shadow-xl hover:underline"><em class="fa fa-user"></em>  Login/Signup</a>
+                </div>
+                <div class="nav-item px-2">
+                    <a href="#" class=" text-white flex  hover:bg-red-500 hover: shadow-xl hover:underline"><em class="fa-solid fa-cart-shopping-fast"></em> Cart</a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <!------------------------------------------------------------------------Section----------------------------------------------------------->
+
+    <!-------------------------------------------------------------------Cards Carousel------------------------------------------------------------>
+    <div class="c ">
+
+        <div class="carousel relative shadow-2xl bg-white ">
+            <div class="carousel-inner lg:relative lg:w-full md:relative md:w-full sm:relative sm:w-full">
+                <!--Slide 1-->
+                <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+                <div class="carousel-item absolute opacity-0 lg:h-50vh md:h-50vh sm:h-50vh">
+                    <img src="./img/carousel1.jpg" alt="" class="lg:h-80 md:h-40 md:w-full sm:h-50 sm:w-full">
+
+
+                </div>
+                <label for="carousel-6" class="prev control-1 lg:h-10 md:h-10  sm:h-10  ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                <label for="carousel-2" class="next control-1 lg:h-10 md:h-10  sm:h-10  mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+                <!--Slide 2-->
+                <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+                <div class="carousel-item absolute opacity-0  lg:h-50vh md:h-50vh sm:h-50vh">
+                    <img src="./img/carousel2.jpg" alt="" class="lg:h-80 md:h-80 sm:h-50vh sm:w-full">
+                </div>
+                <label for="carousel-1" class="prev control-2  lg:h-10 md:h-10    sm:h-10  ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                <label for="carousel-3" class="next control-2  lg:h-10 md:h-10    sm:h-10  mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+                <!--Slide 3-->
+                <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+                <div class="carousel-item absolute opacity-0 lg:h-50vh md:h-50vh sm:h-50vh">
+                    <img src="./img/carousel3.jpg" alt="" class="lg:h-80 md:h-80 sm:h-50 sm:w-full">
+                </div>
+                <label for="carousel-2" class="prev control-3 lg:h-10 md:h-10  sm:h-10  ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                <label for="carousel-4" class="next control-3  lg:h-10 md:h-10  sm:h-10  mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+                <!--Slide 4-->
+                <input class="carousel-open" type="radio" id="carousel-4" name="carousel" aria-hidden="true" hidden="" checked="checked">
+                <div class="carousel-item absolute opacity-0 lg:h-50vh md:h-50vh sm:h-50vh">
+                    <img src="./img/carousel4.jpg" alt="" class="lg:h-80 md:h-80 sm:h-50vh sm:w-full">
+
+                </div>
+                <label for="carousel-3" class="prev control-4  lg:h-10 md:h-10  sm:h-10  ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                <label for="carousel-5" class="next control-4  lg:h-10 md:h-10  sm:h-10  mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+                <!--Slide 5-->
+                <input class="carousel-open" type="radio" id="carousel-5" name="carousel" aria-hidden="true" hidden="">
+                <div class="carousel-item absolute opacity-0 lg:h-50vh md:h-50vh sm:h-50vh">
+                    <img src="./img/carousel5.jpg" alt="" class="lg:h-80 md:h-80 sm:h-50 sm:w-full">
+                </div>
+                <label for="carousel-4" class="prev control-5 lg:h-10 md:h-10  sm:h-10  ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                <label for="carousel-6" class="next control-5  lg:h-10 md:h-10  sm:h-10  mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+                <!--Slide 6-->
+                <input class="carousel-open" type="radio" id="carousel-6" name="carousel" aria-hidden="true" hidden="">
+                <div class="carousel-item absolute opacity-0 lg:h-50vh md:h-50vh sm:h-50vh">
+                    <img src="./img/carousel6.jpg" alt="" class="lg:h-80 md:h-80 sm:h-50 sm:w-full">
+                </div>
+                <label for="carousel-5" class="prev control-6  lg:h-10 md:h-10  sm:h-10  ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                <label for="carousel-7" class="next control-6 lg:h-10 md:h-10  sm:h-10  mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+                <!--Slide 7-->
+                <input class="carousel-open" type="radio" id="carousel-7" name="carousel" aria-hidden="true" hidden="">
+                <div class="carousel-item absolute opacity-0 lg:h-50vh md:h-50vh sm:h-50vh">
+                    <img src="./img/carousel7.jpg" alt="" class="lg:h-80 md:h-80 sm:h-50 sm:w-full">
+                </div>
+                <label for="carousel-6" class="prev control-7  lg:h-10 md:h-10  sm:h-10  ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                <label for="carousel-1" class="next control-7 lg:h-10 md:h-10  sm:h-10  mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+                <!-- Add additional indicators for each slide-->
+                <ol class="carousel-indicators">
+                    <li class="inline-block mr-3">
+                        <label for="carousel-1" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                    </li>
+                    <li class="inline-block mr-3">
+                        <label for="carousel-2" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                    </li>
+                    <li class="inline-block mr-3">
+                        <label for="carousel-3" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                    </li>
+                    <li class="inline-block mr-3">
+                        <label for="carousel-4" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                    </li>
+                    <li class="inline-block mr-3">
+                        <label for="carousel-5" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                    </li>
+                    <li class="inline-block mr-3">
+                        <label for="carousel-6" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                    </li>
+                    <li class="inline-block mr-3">
+                        <label for="carousel-7" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                    </li>
+                </ol>
+
+            </div>
+        </div>
+
+    </div>
+    <!-------------------------------------------------------------------------Cards--------------------------------------------------------->
+    <section class="cards  bg-white-500 mt-10  sm:grid sm:grid-cols-1 lg:grid lg:grid-cols-4 md:grid md:grid-cols-4 ">
+        <div class=" border-4 rounded lg:w-60 lg:ml-20 border-black  md:w-60 md:ml-20 sm:w-60 sm:-ml-30 ">
+
+            <div class="img">
+                <img src="./img/medicines.jpg" alt="" class="lg:w-60 md:w-60 sm:w-10">
+            </div>
+            <span class="uppercase test-2xl text-center font-extrabold text-2xl sm:text-sm md:text-2xl lg:text-2xl">Our medicines</span>
+            <span><button class="ml-20 mt-10 bg-blue-500 text-black-800 hover:shadow-xl border-4 border-black hover:text-xl p-2 rounded">Order Now</button></span>
+
+        </div>
+        <div class=" border-4 rounded lg:w-60 lg:ml-20 border-black  md:w-60 md:ml-20 sm:w-60 sm:-ml-30">
+            <div class="img">
+                <img src="./img/health_care.jpg" alt="" class=" lg:w-60 md:w-60 sm:w-10">
+            </div>
+            <span class="uppercase font-extrabold text-2xl sm:text-sm md:text-2xl lg:text-2xl">Healthcase products</span>
+            <span><button class="ml-20 bg-blue-500 text-black-800 mt-7 hover:shadow-xl border-4 border-black hover:text-xl p-2 rounded">Order Now</button></span>
+
+        </div>
+        <div class=" border-4 rounded lg:w-60 lg:ml-20 border-black  md:w-60 md:ml-20 sm:w-60 sm:-ml-30">
+            <div class="img">
+                <img src="./img/lab_test.jpg" alt="" class=" lg:w-60 md:w-60 sm:w-10">
+            </div>
+            <span class="uppercase text-black-800 font-extrabold text-2xl sm:text-sm md:text-2xl lg:text-2xl">Lab Tests</span>
+            <span><button class="ml-20 bg-blue-500 text-black-800 mt-16 hover:shadow-xl border-4 border-black hover:text-xl p-2 rounded">Order Now</button></span>
+
+        </div>
+    </section>
+    <!---------------------------------------------------------------------Box---------------------------------------------------------->
+    <section class="-mt-60 bg-blue-200 sm:w-full sm:bg-blue-400">
+        <div class="box w-full h-20px bg-blue-400 mt-80 ">
+            <div>
+                <img src="./img/plus.png" alt="" class="w-80">
+            </div>
+            <div class="font-extrabold text-xl text-white ml-80 -mt-10">
+                <span>Save flat 5% extra on medicines and enjoy Free delivery with Plus </span>
+                <span>Membership</span>
+            </div>
+            <div class="-mt-20">
+                <img src="./img/percentage.png" alt="" class="w-40 " style="margin-left: 1200px;">
+            </div>
+        </div>
+    </section>
+    <!------------------------------------------------Offers Just For You ----------------------------------------------------------------------------------------->
+    <section class="pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <em class="fa-solid fa-badge-percent"></em>
+                    <h3 class=" md:font-extrabold md:text-2xl lg:font-extrabold lg:text-2xl sm:text-xl">Offers Just For You</h3>
+                </div>
+                <div class="col-6 text-right">
+                    <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-bs-slide="prev">
+                        <em class="fa fa-arrow-left"></em>
+                    </a>
+                    <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-bs-slide="next">
+                        <em class="fa fa-arrow-right"></em>
+                    </a>
+                </div>
+                <div class="col-12">
+                    <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="carousel">
+
+                        <div class="sm:grid sm:grid-cols-1 lg:grid lg:grid-cols-4 md:grid md:grid-cols-4">
+                            <div class="card d-flex  hover:shadow-2xl   ">
+                                <div>
+                                    <img src="./img/o-1.jpg" alt="" width="75" height="75">
+                                </div>
+                                <div class="card-body float-end" style="margin-left: 53%; margin-top: -25%;">
+                                    <h6 class="card-title ">Flat 25% off +up to </h6>
+                                    <h6 class="card-title1 ">Rs.1000 cashback</h6>
+                                    <h6 class="card-title1 ">code : GRAND25</h6>
+
+
+                                </div>
+
+                            </div>
+                            <div class="card d-flex  hover:shadow-2xl ">
+                                <div>
+                                    <img src="./img/o-2.jpg" alt="" width="75" height="75" class="lg:w-24 lg:h-28 sm:w-12 h-14 md:w-24 md:h-28">
+                                </div>
+                                <div class="card-body float-end" style="margin-left: 53%; margin-top: -25%;">
+                                    <h6 class="card-title ">Flat 25% off +up to </h6>
+                                    <h6 class="card-title1 ">Rs.1000 cashback</h6>
+                                    <h6 class="card-title1 ">code : GRAND25</h6>
+
+
+                                </div>
+                            </div>
+                            <div class="card d-flex  hover:shadow-2xl ">
+                                <div>
+                                    <img src="./img/o-3.png" alt="" width="75" height="75">
+                                </div>
+                                <div class="card-body float-end" style="margin-left: 53%; margin-top: -25%;">
+                                    <h6 class="card-title ">Flat 25% off +up to </h6>
+                                    <h6 class="card-title1 ">Rs.1000 cashback</h6>
+                                    <h6 class="card-title1 ">code : GRAND25</h6>
+
+
+                                </div>
+                            </div>
+                            <div class="card d-flex  hover:shadow-2xl ">
+                                <div>
+                                    <img src="./img/o-4.jpg" alt="" width="75" height="75">
+                                </div>
+                                <div class="card-body float-end" style="margin-left: 53%; margin-top: -25%;">
+                                    <h6 class="card-title ">Flat 25% off +up to </h6>
+                                    <h6 class="card-title1 ">Rs.1000 cashback</h6>
+                                    <h6 class="card-title1 ">code : GRAND25</h6>
+
+
+                                </div>
+                            </div>
+
+                            <div class="card d-flex  hover:shadow-2xl ">
+                                <div>
+                                    <img src="./img/o-9.jpg" alt="" width="75" height="75">
+                                </div>
+                                <div class="card-body float-end" style="margin-left: 53%; margin-top: -25%;">
+                                    <h6 class="card-title ">Flat 25% off +up to </h6>
+                                    <h6 class="card-title1 ">Rs.1000 cashback</h6>
+                                    <h6 class="card-title1 ">code : GRAND25</h6>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class=" sm:grid sm:grid-cols-1 lg:grid lg:grid-cols-4 md:grid md:grid-cols-4">
+                            <div class="card d-flex  hover:shadow-2xl ">
+                                <div>
+                                    <img src="./img/o-5.png" alt="" width="75" height="75">
+                                </div>
+                                <div class="card-body float-end" style="margin-left: 53%; margin-top: -25%;">
+                                    <h6 class="card-title ">Flat 25% off +up to </h6>
+                                    <h6 class="card-title1 ">Rs.1000 cashback</h6>
+                                    <h6 class="card-title1 ">code : GRAND25</h6>
+
+
+                                </div>
+                            </div>
+                            <div class="card d-flex  hover:shadow-2xl ">
+                                <div>
+                                    <img src="./img/o-6.jpg" alt="" width="75" height="75">
+                                </div>
+                                <div class="card-body float-end" style="margin-left: 53%; margin-top: -25%;">
+                                    <h6 class="card-title ">Flat 25% off +up to </h6>
+                                    <h6 class="card-title1 ">Rs.1000 cashback</h6>
+                                    <h6 class="card-title1 ">code : GRAND25</h6>
+
+
+                                </div>
+                            </div>
+                            <div class="card d-flex  hover:shadow-2xl ">
+                                <div>
+                                    <img src="./img/o-7.jpg" alt="" width="75" height="75">
+                                </div>
+                                <div class="card-body float-end" style="margin-left: 53%; margin-top: -25%;">
+                                    <h6 class="card-title ">Flat 25% off +up to </h6>
+                                    <h6 class="card-title1 ">Rs.1000 cashback</h6>
+                                    <h6 class="card-title1 ">code : GRAND25</h6>
+
+
+                                </div>
+                            </div>
+                            <div class="card d-flex  hover:shadow-2xl ">
+                                <div>
+                                    <img src="./img/o-8.jpg" alt="" width="75" height="75">
+                                </div>
+                                <div class="card-body float-end" style="margin-left: 53%; margin-top: -25%;">
+                                    <h6 class="card-title ">Flat 25% off +up to </h6>
+                                    <h6 class="card-title1 ">Rs.1000 cashback</h6>
+                                    <h6 class="card-title1 ">code : GRAND25</h6>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-------------------------------------------------------Featured Brands-------------------------------------------------->
+    <section class="pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <h3 class="font-extrabold text-2xl hover:shadow-lg shadow-black">Featured Brands</h3>
+                </div>
+                <div class="col-6 text-right">
+                    See All
+                    <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-bs-slide="prev">
+                        <em class="fa fa-arrow-left"></em>
+                    </a>
+                    <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-bs-slide="next">
+                        <em class="fa fa-arrow-right"></em>
+                    </a>
+                </div>
+                <div class="col-12">
+                    <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="carousel">
+
+                        <div class=" sm:grid sm:grid-cols-1 lg:grid lg:grid-cols-4 md:grid md:grid-cols-4">
+                            <div class="card  hover:shadow-2xl ">
+                                <img class=" img-fluid lg:w-80 lg:h-120 md:w-80 md:h-120 " alt="100%x280 " src="./img/f-1.jpg ">
+
+
+                            </div>
+                            <div class="card hover:shadow-2xl">
+                                <img class="img-fluid lg:w-80 lg:h-120 md:w-80 md:h-120" alt="100%x280" src="./img/f-2.jpg">
+
+                            </div>
+                            <div class="card   hover:shadow-2xl ">
+                                <img class=" img-fluid lg:w-80 lg:h-120 md:w-80 md:h-120" alt="100%x280 " src="./img/f-3.jpg ">
+
+                            </div>
+                            <div class="card hover:shadow-2xl">
+                                <img class="img-fluid" alt="100%x280" src="./img/f-4.jpg">
+
+                            </div>
+                            <div class="card   hover:shadow-2xl ">
+                                <img class=" img-fluid " alt="100%x280 " src="./img/f-5.jpg ">
+
+                            </div>
+                            <div class="card hover:shadow-2xl">
+                                <img class="img-fluid" alt="100%x280" src="./img/f-6.jpg">
+
+                            </div>
+                            <div class="card   hover:shadow-2xl ">
+                                <img class=" img-fluid " alt="100%x280 " src="./img/f-7.jpg ">
+
+                            </div>
+                            <div class="card hover:shadow-2xl">
+                                <img class="img-fluid" alt="100%x280" src="./img/f-9.jpg">
+
+                            </div>
+                            <div class="card   hover:shadow-2xl ">
+                                <img class=" img-fluid " alt="100%x280 " src="./img/f-10.jpg ">
+
+                            </div>
+                            <div class="card hover:shadow-2xl">
+                                <img class="img-fluid" alt="100%x280" src="./img/f-12.jpg">
+
+                            </div>
+                            <div class="card   hover:shadow-2xl ">
+                                <img class=" img-fluid " alt="100%x280 " src="./img/f-13.jpg ">
+
+                            </div>
+                            <div class="card hover:shadow-2xl">
+                                <img class="img-fluid" alt="100%x280" src="./img/f-14.jpg">
+
+                            </div>
+
+
+                        </div>
+                        <div class=" sm:grid sm:grid-cols-1 lg:grid lg:grid-cols-4 md:grid md:grid-cols-4">
+
+
+                            <div class="card   ">
+                                <img class="img-fluid" alt="" src="../img/f-1.jpg">
+
+                            </div>
+
+
+                            <div class="card   hover:shadow-2xl ">
+                                <img class="img-fluid" alt="100%x280" src="./img/f-18.jpg">
+
+                            </div>
+
+                            <div class="card   hover:shadow-2xl ">
+                                <img class="img-fluid" alt="100%x280" src="./img/f-10.jpg">
+
+                            </div>
+
+                            <div class="card hover:shadow-xl">
+                                <img class="img-fluid" alt="100%x280" src="./img/f-11.jpg">
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!------------------------------------------------Health  Articles--------------------------------------->
+    <section class="pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <h3 class="font-extrabold text-2xl">Health Articles</h3>
+                </div>
+                <div class="col-6 text-right">
+                    See All
+                    <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-bs-slide="prev">
+                        <em class="fa fa-arrow-left"></em>
+                    </a>
+                    <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-bs-slide="next">
+                        <em class="fa fa-arrow-right"></em>
+                    </a>
+                </div>
+                <div class="col-12">
+                    <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="carousel">
+
+                        <div class=" sm:grid sm:grid-cols-1 lg:grid lg:grid-cols-4 md:grid md:grid-cols-4">
+                            <div class="card hover:shadow-xl">
+                                <img class="img-fluid" alt="100%x280" src="./img/h-1.jpg">
+                                <div class="card-body">
+                                    <h4 class="font-bold text-md">Special title treatment</h4>
+                                    <p class="text-xsm">With supporting text below as a natural lead-in to additional content.</p>
+
+                                </div>
+
+                            </div>
+                            <div class="card hover:shadow-xl">
+                                <img class="img-fluid" alt="100%x280" src="./img/h-2.jpg">
+                                <div class="card-body">
+                                    <h4 class="font-bold text-md">Special title treatment</h4>
+                                    <p class="text-xsm">With supporting text below as a natural lead-in to additional content.</p>
+
+                                </div>
+                            </div>
+                            <div class="card hover:shadow-xl">
+                                <img class="img-fluid" alt="100%x280" src="./img/h-3.jpg">
+                                <div class="card-body">
+                                    <h4 class="font-bold text-md">Special title treatment</h4>
+                                    <p class="text-xsm">With supporting text below as a natural lead-in to additional content.</p>
+
+                                </div>
+                            </div>
+                            <div class="card hover:shadow-xl">
+                                <img class="img-fluid" alt="100%x280" src="./img/h-4.jpg">
+                                <div class="card-body">
+                                    <h4 class="font-bold text-md">Special title treatment</h4>
+                                    <p class="text-xsm">With supporting text below as a natural lead-in to additional content.</p>
+
+                                </div>
+
+                            </div>
+                            <div class="card hover:shadow-xl">
+                                <img class="img-fluid" alt="100%x280" src="./img/h-5.jpg">
+                                <div class="card-body">
+                                    <h4 class="font-bold text-md">Special title treatment</h4>
+                                    <p class="text-xsm">With supporting text below as a natural lead-in to additional content.</p>
+
+                                </div>
+                            </div>
+                            <div class="card hover:shadow-xl">
+                                <img class="img-fluid" alt="100%x280" src="./img/h-6.jpg">
+                                <div class="card-body">
+                                    <h4 class="font-bold text-md">Special title treatment</h4>
+                                    <p class="text-xsm">With supporting text below as a natural lead-in to additional content.</p>
+
+                                </div>
+                            </div>
+                            <div class="card hover:shadow-xl">
+                                <img class="img-fluid" alt="100%x280" src="./img/h-7.jpg">
+                                <div class="card-body">
+                                    <h4 class="font-bold text-md">Special title treatment</h4>
+                                    <p class="text-xsm">With supporting text below as a natural lead-in to additional content.</p>
+
+                                </div>
+
+                            </div>
+                            <div class="card hover:shadow-xl">
+                                <img class="img-fluid" alt="100%x280" src="./img/h-8.jpg">
+                                <div class="card-body">
+                                    <h4 class="font-bold text-md">Special title treatment</h4>
+                                    <p class="text-xsm">With supporting text below as a natural lead-in to additional content.</p>
+
+                                </div>
+                            </div>
+                            <div class="card hover:shadow-xl">
+                                <img class="img-fluid" alt="100%x280" src="./img/h-9.jpg">
+                                <div class="card-body">
+                                    <h4 class="font-bold text-md">Special title treatment</h4>
+                                    <p class="text-xsm">With supporting text below as a natural lead-in to additional content.</p>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-----------------------------------------------------------WHat  are customers to Have--------------------------->
+    <section class="pt-5 pb-5 w-100 float-start">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <h3 class="font-extrabold text-2xl">What Are Customers To Have</h3>
+                </div>
+                <div class="col-6 text-right">
+                    <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-bs-slide="prev">
+                        <em class="fa fa-arrow-left"></em>
+                    </a>
+                    <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-bs-slide="next">
+                        <em class="fa fa-arrow-right"></em>
+                    </a>
+                </div>
+                <div class="col-12">
+                    <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="carousel">
+
+                        <div class=" sm:grid sm:grid-cols-1 lg:grid lg:grid-cols-4 md:grid md:grid-cols-4">
+                            <div class="card hover:shadow-xl">
+                                <h4 class="font-bold text-xl">Parth Panchal</h4>
+                                <p class="text-xs">02/02/2019</p>
+                                <div class="card-body">
+
+                                    <p class="text-sm">"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem obcaecati aliquid ducimus totam voluptatem dolore magni! Quaerat eveniet beatae sunt quam itaque saepe, repudiandae, voluptatum ea tempore nisi commodi
+                                        facilis."
+                                    </p>
+
+                                </div>
+
+                            </div>
+                            <div class="card hover:shadow-xl">
+
+                                <h4 class="font-bold text-xl">Parth Panchal</h4>
+                                <p class="text-xs">02/02/2019</p>
+                                <div class="card-body">
+
+                                    <p class="text-sm">"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem obcaecati aliquid ducimus totam voluptatem dolore magni! Quaerat eveniet beatae sunt quam itaque saepe, repudiandae, voluptatum ea tempore nisi commodi
+                                        facilis."
+                                    </p>
+
+                                </div>
+                            </div>
+                            <div class="card hover:shadow-xl">
+
+                                <h4 class="font-bold text-xl">Parth Panchal</h4>
+                                <p class="text-xs">02/02/2019</p>
+                                <div class="card-body">
+
+                                    <p class="text-sm">"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem obcaecati aliquid ducimus totam voluptatem dolore magni! Quaerat eveniet beatae sunt quam itaque saepe, repudiandae, voluptatum ea tempore nisi commodi
+                                        facilis."
+                                    </p>
+
+                                </div>
+                            </div>
+                            <div class="card hover:shadow-xl">
+
+                                <h4 class="font-bold text-xl">Parth Panchal</h4>
+                                <p class="text-xs">02/02/2019</p>
+                                <div class="card-body">
+
+                                    <p class="text-sm">"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem obcaecati aliquid ducimus totam voluptatem dolore magni! Quaerat eveniet beatae sunt quam itaque saepe, repudiandae, voluptatum ea tempore nisi commodi
+                                        facilis."
+                                    </p>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class=" sm:grid sm:grid-cols-1 lg:grid lg:grid-cols-4 md:grid md:grid-cols-4">
+                            <div class="card hover:shadow-xl">
+
+                                <h4 class="font-bold text-xl">Parth Panchal</h4>
+                                <p class="text-xs">02/02/2019</p>
+                                <div class="card-body">
+
+                                    <p class="text-sm">"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem obcaecati aliquid ducimus totam voluptatem dolore magni! Quaerat eveniet beatae sunt quam itaque saepe, repudiandae, voluptatum ea tempore nisi commodi
+                                        facilis."
+                                    </p>
+
+                                </div>
+                            </div>
+                            <div class="card hover:shadow-xl">
+
+                                <h4 class="font-bold text-xl">Parth Panchal</h4>
+                                <p class="text-xs">02/02/2019</p>
+                                <div class="card-body">
+
+                                    <p class="text-sm">"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem obcaecati aliquid ducimus totam voluptatem dolore magni! Quaerat eveniet beatae sunt quam itaque saepe, repudiandae, voluptatum ea tempore nisi commodi
+                                        facilis."
+                                    </p>
+
+                                </div>
+                            </div>
+                            <div class="card hover:shadow-xl">
+
+                                <h4 class="font-bold text-xl">Parth Panchal</h4>
+                                <p class="text-xs">02/02/2019</p>
+                                <div class="card-body">
+
+                                    <p class="text-sm">"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem obcaecati aliquid ducimus totam voluptatem dolore magni! Quaerat eveniet beatae sunt quam itaque saepe, repudiandae, voluptatum ea tempore nisi commodi
+                                        facilis."
+                                    </p>
+
+                                </div>
+
+                            </div>
+                            <div class="card hover:shadow-xl">
+
+                                <h4 class="font-bold text-xl">Parth Panchal</h4>
+                                <p class="text-xs">02/02/2019</p>
+                                <div class="card-body">
+
+                                    <p class="text-sm">"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem obcaecati aliquid ducimus totam voluptatem dolore magni! Quaerat eveniet beatae sunt quam itaque saepe, repudiandae, voluptatum ea tempore nisi commodi
+                                        facilis."
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="carousel-item">
+                            <div class="row">
+
+
+                                <div class="col-md-4 mb-3">
+                                    <div class="card hover:shadow-xl">
+
+                                        <h4 class="font-bold text-xl">Parth Panchal</h4>
+                                        <p class="text-xs">02/02/2019</p>
+                                        <div class="card-body">
+
+                                            <p class="text-sm">"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem obcaecati aliquid ducimus totam voluptatem dolore magni! Quaerat eveniet beatae sunt quam itaque saepe, repudiandae, voluptatum ea tempore nisi
+                                                commodi facilis."
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!--------------------------------------------Download--------------------------------------------------------------->
+    <section id="download" class="bg-light">
+        <div class="container">
+            <div class=" grid grid-cols-3 ml-10 w-full bg-slate-400">
+                <div class="  w-full h-full ">
+                    <p style="margin-top: 10%;">Simplifying Healthcare, Impacting Lives</p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p style="margin-top: 30%;">Download App for Free</p>
+
+                    <div class="d-flex">
+                        <a href="#" class="btn btn-store bg-dark">
+                            <span class="fa-brands fa-google-play fa-3x pull-left"></span>
+                            <span class="btn-label">Download on the</span>
+                            <span class="btn-caption">Google Play</span>
+                        </a>
+                        <a href="#" class="btn btn-store bg-dark">
+                            <span class="fa fa-apple fa-3x pull-left"></span>
+                            <span class="btn-label">Download on the</span>
+                            <span class="btn-caption">App Store</span>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="float-right">
+                    <img src="./img/up_footer.jpg" alt="" height="700" width="700">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--------------------------------------------------------------------Customer Reviews ----------------------------------------------------------------------------------------->
+    <section class=" sm:grid sm:grid-cols-1 lg:grid lg:grid-cols-4 md:grid md:grid-cols-4">
+        <div class="c1">
+            <div class="card border-none">
+                <div class="card-body">
+                    <img src="./img/25.svg" alt="">
+                    <h1 class="font-extrabold text-2xl">25 Million</h1>
+                    <p class="card-text">
+                        <h4>Registerd Users as of Jun 30,2021</h4>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card border-none">
+            <div class="card-body">
+                <img src="./img/8.8.svg" alt="">
+                <h1 class="font-extrabold text-2xl">18 Million</h1>
+                <p class="card-text">
+                    <h4>PharmEasy Orders as of FY21</h4>
+                </p>
+            </div>
+        </div>
+        <div class="card border-none">
+            <div class="card-body">
+                <img src="./img/50K.svg" alt="">
+                <h1 class="font-extrabold text-2xl">50K+</h1>
+                <p class="card-text">
+                    <h4>SKUs sold in Q1FY22</h4>
+                </p>
+            </div>
+        </div>
+        <div class="card border-none">
+            <div class="card-body">
+                <img src="./img/18K+.svg" alt="">
+                <h1 class="font-extrabold text-2xl">18k</h1>
+                <p class="card-text">
+                    <h4>Pin-Codes Servoced for the amount of June 2021</h4>
+                </p>
+            </div>
+        </div>
+    </section>
+    <!----------------------------------------------------------------------------Top Selling Healthcare------------------------------------------------------>
+    <section class=" bg-gray-200 ml-10" style="margin-left: -10%;">
+        <div class="container">
+            <div class="row1">
+                <a style="font-weight: bold;">Top-Selling Healthcare Products:</a>
+                <a class="text-black">Accu-Chek Active - 100 Strips  |   </a>
+                <a href="" class="text-black">  Supradyn Multivitamin Tablets | </a>
+                <a href="">  DR Morepen BG 03 - 50 Strips | </a>
+                <a href="">Dettol Antiseptic Liquid | </a>
+                <a href="">Ensure Diabetes Care Vanilla Sugar Free Jar | </a>
+                <a href="">Dettol Instant Hand Sanitizer | </a>
+                <a href="">Everherb Shilajit | </a>
+                <a href="">Softovac SF Powder | </a>
+                <a href=""> Pediasure Premium Chocolate Refill</a>
+            </div>
+            <br>
+            <div class="row1">
+                <a style="font-weight: bold;"> Top-Selling Medicines: </a>
+                <a href=""> Dolovera Gel | </a>
+                <a href="">  Dolovera Gel | </a>
+                <a href=""> Neurobion | </a>
+                <a href=""> Forte | </a>
+                <a href=""> Chymoral | </a>
+                <a href=""> Forte | </a>
+                <a href=""> Crocin | </a>
+                <a href=""> Advance | </a>
+                <a href=""> Soframycin | </a>
+                <a href=""> Dexorange | </a>
+                <a href=""> Becadexamin | </a>
+                <a href=""> Folvite  | </a>
+                <a href=""> Livogen | </a>
+                <a href=""> Becosules | </a>
+                <a href=""> Fourderm | </a>
+                <a href=""> Nurokind | </a>
+                <a href=""> Plus | </a>
+                <a href=""> Burnol | </a>
+                <a href=""> Crocin 650 | </a>
+                <a href="">  Mintop 5 | </a>
+                <a href=""> Thrombophob | </a>
+                <a href=""> Evion 600 </a>
+
+            </div>
+            <br>
+            <div class="row1">
+                <a style="font-weight: bold;"> COVID-19 Preventatives:</a>
+                <a href=""> N95 Masks | </a>
+                <a href=""> Hand Sanitizers | </a>
+                <a href=""> Hand Gloves, Disinfectants, Thermometers & more! </a>
+            </div>
+            <br>
+            <div class="row1">
+                <a>
+                    <h4 style="font-weight: bolder;">Your One-Stop Online Pharmacy - PharmEasy</h4>
+                </a>
+            </div>
+            <br>
+            <div class="row">
+                <a style="font-weight: bold;">We've got India Covered! </a>
+                <br>
+                <br>
+                <p>We now deliver in 1000+ cities and towns across 22000+ pin codes. We thereby cover every nook and corner of the country! The major cities in which we deliver include Mumbai, Kolkata, Delhi, Bengaluru, Ahmedabad, Hyderabad, Chennai, Thane,
+                    Howrah, Pune, Gurgaon, Navi Mumbai, Jaipur, Noida, Lucknow, Ghaziabad & Vadodara.</p>
+            </div>
+            <br>
+            <div class="row">
+                <a style="font-weight: bold;">Say Goodbye to All Your Healthcare Worries With PharmEasy!</a>
+                <br>
+                <br>
+                <p>PharmEasy is here to help you take it easy! We are amongst one of India's top online pharmacy and medical care platforms. It enables you to order pharmaceutical and healthcare products online by connecting you to registered retail pharmacies
+                    and get them delivered to your home. We are an online medical store, making your purchase easy, simple, and affordable!</p>
+            </div>
+            <br>
+            <div class="row">
+                <a style="font-weight: bold;">Why Are We The Most Preferred Online Pharmacy?</a>
+                <br>
+                <br>
+                <p>Lucrative offers on our platform allow you to make payment online and via various payment wallets at a discounted price. Alternatively, you can also choose to pay cash on delivery as we deliver the products at your doorstep. We cater to
+                    all your pharmaceutical needs and also make <a href=""> ordering medicines online </a>a hassle-free experience for you. We connect you only with registered retail pharmacies & certified diagnostic labs. We ensure that healthcare is
+                    affordable to all and make the process of ordering online simple</p>
+            </div>
+            <br>
+            <div class="row">
+                <a style="font-weight: bold;">Sit Back & Relax While You Get Your Essentials Delivered Every Month!</a>
+                <br>
+                <br>
+                <p>Its tough to remember to refill every month, especially in the case of chronic diseases. PharmEasy’s subscription service not only ensures that you are reminded of your refills but also makes sure that you are never out on your medical
+                    essentials. You will get a reminder every month and your order will be delivered at your convenience!</p>
+            </div>
+            <br>
+            <div class="row">
+                <a style="font-weight: bold;">Access medical and health information:</a>
+                <br>
+                <br>
+                <p>PharmEasy delivers reliable and accurate medical information that has been carefully written, vetted and validated by our health experts. Our specialists curate high-quality and most reliable literature about medicines, illnesses, lab
+                    tests, Ayurvedic and over the counter health products.</p>
+            </div>
+            <br>
+            <div class="row">
+                <a style="font-weight: bold;">We Believe in "Simplifying Healthcare, Impacting Lives!"</a>
+                <br>
+                <br>
+
+            </div>
+            <br>
+
+        </div>
+    </section>
+    <!----------------------------------------------------------------Footer----------------------------------------------------------------------->
+    <section class="footer bg-black-800">
+        <div class="footer bg-black grid grid-cols-4">
+            <div class="col-lg-3   justify-content-between ">
+                <p class="text-start ">
+                    <a style="color: white;">
+                        <h3>Company</h3>
+                    </a>
+                    <a href="#" style="color: white;">About Us</a><br>
+                    <a href="#" style="color: white;">Carrier</a><br>
+                    <a href="#" style="color: white;">Blog</a><br>
+                    <a href="#" style="color: white;">Partner at PharmEasy</a><br>
+                    <a href="#" style="color: white;">Sell at PharmEasy</a><br>
+                    <br>
+                    <a style="color: white;">
+                        <h3>Our Services</h3>
+                    </a>
+                    <a href="#" style="color: white; line-height: 5px;">Order Medicines</a><br>
+                    <a href="#" style="color: white;">HealthCare Products</a><br>
+                    <a href="#" style="color: white;">Lab Tests</a><br>
+                </p>
+            </div>
+            <div class="col-lg-3">
+                <p class="text-start ">
+                    <a style="color: white;">
+                        <h3>Featured Categories</h3>
+                    </a>
+                    <a href="#" style="color: white;">Covid Essentials</a><br>
+                    <a href="#" style="color: white;">Healthcare Devices</a><br>
+                    <a href="#" style="color: white;">Health Food and Drinks</a><br>
+                    <a href="#" style="color: white;">Personal Care</a><br>
+                    <a href="#" style="color: white;">Ayurvedic Care</a><br>
+                    <a href="#" style="color: white;">Mother and Baby Care</a><br>
+                    <a href="#" style="color: white;">Accessories And Wearables</a><br>
+                    <a href="#" style="color: white;">Skin Care</a><br>
+                    <a href="#" style="color: white;">Diabetic Care</a><br>
+                    <a href="#" style="color: white;">Health Condition</a><br>
+                    <a href="#" style="color: white;">Sexual Wellness</a><br>
+                    <a href="#" style="color: white;">Home Care</a><br>
+                    <a href="#" style="color: white;">Fitness & Supplements</a><br>
+                    <a href="#" style="color: white;">Elderly Care</a><br>
+                    <a href="#" style="color: white;">Surgicals and Dressings</a><br>
+                    <a href="#" style="color: white;">Pet Care</a><br>
+                </p>
+            </div>
+            <div class="col-lg-3">
+                <p class="text-start ">
+                    <a style="color: white;">
+                        <h3>Need Help</h3>
+                    </a>
+                    <a href="#" style="color: white;">Browse All Medicines</a><br>
+                    <a href="#" style="color: white;">Browse All Molecules</a><br>
+                    <a href="#" style="color: white;">Browse All Cities & Areas</a><br>
+                    <a href="#" style="color: white;">FAQs</a><br>
+
+                    <br>
+                    <a style="color: white;">
+                        <h3>Policy Info</h3>
+                    </a>
+                    <a href="#" style="color: white;">Editorial Policy</a><br>
+                    <a href="#" style="color: white;">Privacy Policy</a><br>
+                    <a href="#" style="color: white;">Vulnerability Disclosure Policy</a><br>
+                    <a href="#" style="color: white;">Teams & Conditions</a><br>
+                    <a href="#" style="color: white;">Customer Support Policy</a><br>
+                    <a href="#" style="color: white;">Return Policy</a><br>
+                </p>
+            </div>
+            <div class="col-lg-3">
+                <p class="text-start ">
+                    <a style="color: white;">
+                        <h3>Follow Us</h3>
+                        <div class="flex">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram " viewBox="0 0 16 16">
+                                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                                  </svg>
+
+                            </div>
+
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                                  </svg>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                                    <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+                                  </svg>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                                  </svg>
+                            </div>
+
+                        </div>
+                    </a>
+                </p>
+            </div>
+            <div class="payment bg-black">
+                <div class="row2" style="margin-left: -10%;">
+                    <p class="text-start ">
+                        <a style="color: white;">
+                            <h3>Our Payment Partners</h3>
+                        </a>
+                    </p>
+                </div>
+                <div class=" sm:grid sm:grid-cols-1 lg:grid lg:grid-cols-4 md:grid md:grid-cols-4" style="margin-left: -10%;">
+
+                    <div class="flex">
+                        <div><img src="./img/p1.svg" alt="" width="50"></div>
+                        <div><img src="./img/p2.svg" alt="" width="50"></div>
+                        <div><img src="./img/p3.svg" alt="" width="50"></div>
+                        <div><img src="./img/p4.svg" alt="" width="40"></div>
+                        <div><img src="./img/p5.svg" alt="" width="50"></div>
+                        <div><img src="./img/p6.svg" alt="" width="40"></div>
+                        <div><img src="./img/p7.svg" alt="" width="50"></div>
+                        <div><img src="./img/p8.svg" alt="" width="50"></div>
+                        <div><img src="./img/p9.svg" alt="" width="50"></div>
+                        <div><img src="./img/p10.svg" alt="" width="70"></div>
+                        <div><img src="./img/p11.svg" alt="" width="70"></div>
+                        <div><img src="./img/p12.svg" alt="" width="40"></div>
+
+
+                    </div>
+
+                    <div>
+                        <p> &copy 2022 PharmEasy. All Rights Reserved</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+    <script src="../../node_modules/tw-elements/dist/js/index.min.js"></script>
+</body>
+
+</html>

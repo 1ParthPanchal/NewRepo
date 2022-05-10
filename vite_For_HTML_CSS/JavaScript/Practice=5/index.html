@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/js/bootstrap.min.js">
+    <title>JS-Practice=5</title>
+</head>
+
+<body class="bg-dark">
+    <form action="" id="form" class=" bg-info " style="margin-top: 10%; align-content: center; border-width: 50%; border-color: aquamarine;">
+        <h1>String </h1>
+        <label for="string">Please Enter String</label><br>
+        <input type="text" name="string" id="demo" placeholder="Enter String"><br> <br>
+        <label for="str1">From which number of word you want to extract?</label><br>
+        <input type="text" name="string" id="sub" placeholder="Enter String"><br> <br>
+
+        <input type="button" value="Submit" onclick="substring()"> <br>
+        <input type="button" value="reset" onclick="reset()">
+    </form>
+    <p id="demo"></p>
+    <p id="sub"></p>
+
+    <script>
+        const str = document.getElementById('demo').value;
+        const str1 = document.getElementById('sub').value;
+
+        function substring() {
+            const str = document.getElementById('demo').value;
+            const str1 = document.getElementById('sub').value;
+            const word = str.substring(str1);
+            const word1 = str1.substring();
+            if (str.length == 0 || str.length == null) {
+                alert("string is empty or null");
+            } else if (str1.length == 0 || str.length == null) {
+                alert("string is empty or null");
+            } else if (str1.indexOf(' ') >= 0) {
+
+                alert("String have white space");
+
+            } else if (str.indexOf(' ') >= 0) {
+
+                alert("String have white space");
+
+            } else {
+                alert(" " + word);
+            }
+
+        }
+
+        function reset() {
+            document.getElenentById('demo').reset();
+        }
+    </script>
+</body>
+
+</html>

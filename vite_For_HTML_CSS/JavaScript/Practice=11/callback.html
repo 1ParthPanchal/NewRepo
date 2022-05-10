@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../dist/output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>CallBack</title>
+</head>
+
+<body>
+    <div class="mt-36 border-4 border-blue-700 bg-sky-500"> 
+            <h2>Calculate Square of number By CallBack</h2>
+            <label for="square">Enter Number</label>
+            <input type="text" name="square" id="sqr"><br><br>
+            <input type="button" value="Square" onclick="square()">
+            <p id="demo"></p>
+     </div>
+
+    <script>
+        function myDisplayer(some) {
+            document.getElementById("demo").innerHTML = some;
+        }
+
+        function Callback(num) {
+            let sum = num * num;
+            return sum;
+        }
+        function square() {
+            let res = document.getElementById('sqr').value;
+            let result = Callback(res);
+            myDisplayer(result);
+        }
+    </script>
+</body>
+
+</html>

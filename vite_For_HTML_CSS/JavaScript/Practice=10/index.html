@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>Js Practice=10</title>
+</head>
+
+<body class="bg-danger">
+    <div class="bg-info h-64 " style="margin-top: 14%; border-width: 40%;">
+            <h1>Window Object resizeBy() Method</h1>
+
+
+            <p>Open a new window</p>
+
+            <button onclick="openWin()">Create window</button>
+            <button onclick="resizeWin()">Resize window</button>
+    </div>
+
+    <script>
+        let myWindow;
+
+        function openWin() {
+            myWindow = window.open("", "", "width=800, height=400");
+        }
+
+        function resizeWin() {
+            var x =
+                myWindow.resizeTo(250, 250);
+        }
+    </script>
+</body>
+
+</html>

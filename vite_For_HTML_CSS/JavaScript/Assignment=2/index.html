@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap-grid.min.css">
+    <script src="../../../../bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../../../../bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap-grid.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Date Validation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body style="border: 4px; border-radius: 4px;" class="bg-sky-300" >
+    <h1 class=" d-flex align-items-center">Date entered by the user should be checked for whether it is a Valid Date or not.</h1>
+    <div style="border: 4px;" class="mt-40">
+            <div style=" border-radius:4px ;" class="mt-40 ml-14">
+                <label for="date">Enter Date</label>
+                <input type="text" id="date" placeholder="MM-DD-YYYY">
+                <span id="validate"></span>
+            </div>
+    </div>
+
+    <button onclick="dateValidation();" style="margin-top:10px;">Click Here</button>
+
+</body>
+<script>
+    formate = /^(?:(0[1-9]|1[012])[\-.](0[1-9]|[12][0-9]|3[01])[\-.][0-9]{4})$/;
+
+    function dateValidation() {
+        date = document.getElementById("date").value;
+        // alert(formate.test(date));
+        if (!(formate.test(date))) {
+            document.getElementById("validate").innerHTML = "Inavlaid Formate";
+        } else {
+            dateData = date.split("-");
+            // alert(dateData);
+            m = parseInt(dateData[0]);
+            d = parseInt(dateData[1]);
+            // alert(d)
+            y = parseInt(dateData[2]);
+            if ((m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 10 || m == 12) && (d > 31)) {
+                document.getElementById("validate").innerHTML = "Inavlaid for Given Month Day";
+            } else if ((m == 4 || m == 6 || m == 9 || m == 11) && (d > 30)) {
+                document.getElementById("validate").innerHTML = "Inavlaid for Given Month Day";
+            } else if (m == 2 && (y % 4 == 0) && d > 29) {
+                document.getElementById("validate").innerHTML = "Inavlaid Day for Month Feb for Leap Year";
+            } else if (m == 2 && (y % 4 != 0) && d > 28) {
+                document.getElementById("validate").innerHTML = "Inavlaid Day for Month Feb for non Leap Year";
+            } else {
+                document.getElementById("validate").innerHTML = "Valid Date";
+            }
+        }
+
+    }
+</script>
+
+</html>

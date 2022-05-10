@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Practice=1</title>
+
+
+</head>
+
+<body>
+    <script>
+        /*function valid() {
+                                                                                                                                                                    if (num1 && num2 && num3 < 20) {
+                                                                                                                                                                        document.write("Please enter number between 21 to 50");
+                                                                                                                                                                    }
+                                                                                                                                                                    if (num1 && num2 && num3 >= 50) {
+                                                                                                                                                                        document.write("Please enter number between 21 to 50");
+                                                                                                                                                                    }
+                                                                                                                                                                }*/
+        /*function valid() {
+            num1 = Math.min(0, Math.max(50));
+            num2 = Math.min(0, Math.max(50));
+            num3 = Math.min(0, Math.max(50));
+        }*/
+        const num1 = parseInt(prompt("Enter first number: "));
+        const num2 = parseInt(prompt("Enter second number: "));
+        const num3 = parseInt(prompt("Enter third number: "));
+        //<input id="userBlank" type="number" min="0" max="9" required> For Futher Use
+        const largest = Math.max(num1, num2, num3);
+        const sum = num1 + num2 + num3;
+        document.write("The largest number is " + largest);
+        document.write("The sum is  " + sum);
+    </script>
+</body>
+
+</html>

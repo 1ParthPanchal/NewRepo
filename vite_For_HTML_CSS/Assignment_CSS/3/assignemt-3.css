@@ -1,0 +1,13 @@
+.nav-link{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: blue;
+    position: relative;
+}
+.navbar  :hover{
+    background-color: aquamarine;
+    color: white;
+    border: 1px solid black;
+}
+.navbar{
+    background-color: aquamarine;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!--- <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">-->
+    <title>Cart Summary</title>
+</head>
+
+<body>
+    <div class="container mt-3">
+        <h1 class="text-center bg-dark text-info">Cart Summary</h1>
+        <table aria-label="" class="table-bordered table">
+            <thead class="bg-dark text-warning">
+                <tr class="text-center">
+                    <th>ProductID</th>
+                    <th>ProductName</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="result" class="bg-dark text-white text-center">
+
+            </tbody>
+        </table>
+
+    </div>
+
+    <div class="container mt-5">
+
+        <button onclick="summary()" class="w-100">Cart Summary</button>
+        <button onclick=" getJsonData()">HII</button>
+
+        <table aria-label="" class="table-bordered table mt-3">
+
+            <thead class="bg-dark text-warning">
+
+                <tr class="text-center">
+
+                    <th>ProductionID</th>
+
+                    <th>ProductName</th>
+
+                    <th>Price</th>
+
+                    <th>Quantity</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="answer" class="bg-dark text-white text-center"></tbody>
+
+        </table>
+
+    </div>
+
+    <script>
+        getJsonData();
+        async function getJsonData() {
+            var myFileObj = await fetch("Api.json");
+            var myData = await myFileObj.json();
+            console.log(myData.product);
+
+            for (var i = 0; i < 6; i++) {
+                var dataa =  "<tr><td> " + myData.product[i].ID + "</td><td> " + myData.product[i].Name + " </td><td> " + myData.product[i].Price + "</td><td>" + myData.product[i].Quantity + "</td><td>"+<button onclick='add()'>Add to Cart</button>+"</td></tr>";
+                document.getElementById("result").innerHTML = dataa;
+            }
+        }
+
+        function add() {
+
+            const myJSON = JSON.stringify(myData.product);
+
+            localStorage.setItem("answer", myJSON);
+
+            alert("Item Added");
+
+        }
+
+
+
+        function summary() 
+        {
+
+            let text = localStorage.getItem("answer");
+
+            let obj = JSON.parse(text);
+
+            for (var i = 0; i < 6; i++)
+            {
+                var data = "<tr><td>" + obj[i].ID + "</td><td>" + obj[i].Name + "</td><td>" + obj[i].Price + "</td><td>" + obj[i].Quantity + "</td></tr>";
+                document.getElementById('answer').innerHTML = data;
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Of Mumbai</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-400">
+    <h4 class="text-sky-100 font-extrabold text-4xl text-center mt-48">University of Mumbai needs to set an online exam for their students. For that they need to set a timer for three hours. After 3 hours exams should be finished.</h4>
+    <h1 style="color: red;" id="demo"></h1>
+    <script>
+        const myPromise = new Promise(function(myResolve, myReject) {
+            setTimeout(function() {
+                myResolve("Exam Is Over!!");
+            }, 1.08e+7);
+        });
+
+        myPromise.then(function(value) {
+            document.getElementById("demo").innerHTML = value;
+        });
+    </script>
+</body>
+
+</html>

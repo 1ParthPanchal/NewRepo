@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../../../../bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../../../../bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Radio-Buttons</title>
+</head>
+
+<body class=" bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 ...">
+    <div class="container  ">
+        <h1 class="font-semibold text-4xl text-white shadow-xl text-center mt-20 border-2 p-2">Practice-3</h1>
+        <hr>
+        <div class="mt-44 border-8 h-32 text-center bg-sky-300 border-rounded">
+            <label for="" class="text-2xl font-bold  bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">Please select your technology :</label>
+            <div class="d-flex gap-4">
+                <div>
+                    <input type="radio" name="btn" id="php">
+                    <label for="PHP">PHP</label>
+                   <div>
+                        <span id="ph" class=" bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 shadow-xl font-bold">You have selected : PHP</span>
+                    </div>
+                </div>
+                <div>
+                    <input type="radio"  name="btn" id="net">
+                    <label for="net">ASP.NET</label>
+                    <div>
+                        <span id="asp"  class=" bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 shadow-xl font-bold">You have selected : ASP.Net</span>
+                    </div>
+                </div>
+                <div>
+                    <input type="radio" name="btn" id="ASP">
+                    <label for="ASP">ASP</label>
+                    <div>
+                        <span id="as"  class=" bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 shadow-xl font-bold">You have selected : ASP</span>
+                    </div>
+                </div>
+                <div>
+                    <input type="radio" name="btn" id="jsp">
+                    <label for="JSP">JSP</label>
+                    <div>
+                        <span id="js"  class=" bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 shadow-xl font-bold">You have selected : JSP</span>
+                    </div>
+                </div>
+                <div>
+                    <input type="radio"  name="btn" id="fusion">
+                    <label for="Cold Fusion">Cold Fusion</label>
+                    <div>
+                        <span id="cf"  class=" bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 shadow-xl font-bold">You have selected : Cold Fusion</span>
+                    </div>
+                </div>
+                <div>
+                    <input type="radio"  name="btn" id="other">
+                    <label for="other">Other</label>
+                    <div>
+                        <span id="oth"  class=" bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 shadow-xl font-bold">You have selected : Others</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $("span").hide();
+            $("#php").click(function() {
+                $("span").hide();
+                $("#ph").show();
+            });
+           $("#net").click(function() {
+            $("span").hide();
+                
+                $("#asp").show();
+            });
+            $("#ASP").click(function() {
+                $("span").hide();
+                $("#as").show();
+            });
+            $("#jsp").click(function() {
+                $("span").hide();
+                $("#js").show();
+            });
+            $("#fusion").click(function() {
+                $("span").hide();
+                $("#cf").show();
+            });
+             $("#other").click(function() {
+                $("span").hide();
+                $("#oth").show();
+            });
+        });
+    </script>
+</body>
+
+</html>

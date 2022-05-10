@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>Web-Fetch-API</title>
+</head>
+
+<body>
+    <div class="container mt-3">
+        <h1 class="text-center bg-dark text-info"> </h1>
+        <table aria-label="" class="table-bordered table">
+            <thead class="bg-dark text-warning">
+                <tr class="text-center">
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody id="result" class="bg-dark text-white">
+
+            </tbody>
+        </table>
+    </div>
+
+    <script type="text/javascript">
+        getJsonData();
+        async function getJsonData() {
+            var myFileObj = await fetch("apiii.json");
+            var myData = await myFileObj.json();
+            console.log(myData.products);
+
+            for (var i = 0; i < myData.products.length; i++) {
+                document.getElementById("result").innerHTML += "<tr><td> " + myData.products[i].Name + "</td><td> " + myData.products[i].Price + " </td><td> " + myData.products[i].Location + "</td></tr>"
+            }
+        }
+    </script>
+</body>
+
+</html>

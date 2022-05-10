@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+
+<body style="background-color: aqua;">
+    <div  style="margin-top: 14%; margin-left: 40%; border: 40px;" class="border-8 border-black">
+            <button type="button" onclick="myFunction()">Count!</button>
+            <button type="button" onclick="myFunction1()">Remove!</button>
+
+            <p id="demo" class="text-xl font-bold ">100</p>
+            <p id="Demo">100</p>
+    </div>
+    <script>
+        const add = (function() {
+            let counter = 100;
+            return function() {
+                counter -= 1;
+                return counter;
+            }
+        })();
+        const remove = (function() {
+            let counter = 100;
+            return function() {
+                counter += 1;
+                return counter;
+            }
+        })();
+
+        function myFunction() {
+            document.getElementById("demo").innerHTML = add();
+
+        }
+
+        function myFunction1() {
+            document.getElementById("Demo").innerHTML = remove();
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>JS-Practice=7</title>
+</head>
+
+<body class="bg-amber-200" >
+    <div  class="mt-36 border-8 border-blue-800 bg-neutral-400">
+            <h1>Stack Operations , Push , POP , Shift , Delete</h1><br><br>
+            <input type="button" value="Show Array" onclick="show()" class="border-8 border-red-400">
+            <input type="button" value="Push" onclick="push()"  class="border-4 border-blue-500">
+            <input type="button" value="Pop" onclick="pop()"  class="border-2 border-sky-600">
+            <input type="button" value="Shift" onclick="shift()"  class="border-2 border-black">
+            <input type="button" value="Unshift" onclick="unshift()"  class="border-2 border-black">
+            <input type="button" value="Delete" onclick="remove()" class="border-4 border-black"><br><br>
+            <h1 id="display"></h1>
+        </div>
+    <script class="ml-36">
+        days = ["Red", "Green", "Blue", "Yello", "orange", "white", "Black"];
+
+        function show() {
+            document.getElementById("display").innerHTML = days;
+        }
+
+        function push() {
+            days.push("this all are Colors of Rainbow", "good morning");
+            document.getElementById("display").innerHTML = days;
+        }
+
+        function pop() {
+            days.pop();
+            document.getElementById("display").innerHTML = days;
+        }
+
+        function shift() {
+            days.shift();
+            document.getElementById("display").innerHTML = days;
+        }
+
+        function unshift() {
+            days.unshift("hello everyone !!");
+            document.getElementById("display").innerHTML = days;
+        }
+
+        function remove() {
+            days.splice(0, );
+            document.getElementById("display").innerHTML = days;
+        }
+    </script>
+</body>
+
+</html>

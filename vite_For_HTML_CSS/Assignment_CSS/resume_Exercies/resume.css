@@ -1,0 +1,301 @@
+body {
+    font-family: "Lato", sans-serif;
+    background-color: aquamarine;
+  }
+  h1{
+    font-size: xx-large;
+  }
+  
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 68, 0, 0.863);
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: rgba(255, 255, 255, 0.705);
+    display: block;
+    
+    text-align: center;
+    
+  }
+  
+.sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+.main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    /*padding: 0px 10px;*/
+  }
+@media screen and (max-height: 300px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+.sidenav  img{
+      align-items: center;
+      width: 70%;
+      height: 25%;
+      justify-content: center;
+      display: inline-block;
+      margin-left: 20px;
+      border-radius: 50%;
+  }
+@media (max-width:1000px) {
+    img{
+        flex: 50%;
+        width: 100%;
+        
+    }
+    .sidenav{
+        flex: 50%;
+        position: relative;
+        height: 100%;
+        color: black;
+        background-color: aqua;    
+    }
+    .sidenav a{
+        color: blue;
+        flex: 50%;
+        background-color: aqua;  
+        
+        height: 100%;
+    }
+    body{
+      background-color:coral;
+      color: gold;
+      font-size: small;
+    }
+    .about{
+      color: gold;
+      font-size: small;
+    }
+    .awards{
+      color: gold;
+      font-size: small;
+    }
+    .education{
+      color: gold;
+      font-size: small;
+    }
+    .experiance{
+      color: gold;
+      font-size: small;
+    }
+    .interest{
+      color: gold;
+      font-size: small;
+    }
+    .projects{
+      color: gold;
+      font-size: small;
+    }
+    .skills{
+      color: gold;
+      font-size: small;
+    }
+}
+/*@media (min-width:50px)
+ {
+     .sidenav
+     {
+       background-color: black;
+       color: blue;
+     }
+     .sidenav a
+     {
+        color: blue;
+        flex: 50%;
+        background-color: aqua;  
+        color: black;
+      }
+  } */
+
+
+  
+/*ABOUT*/
+.about{
+  
+  margin-left: 200px;
+  margin-top: 200px;
+  
+  color: blue;
+}
+.about h1{
+  text-align: center;
+  align-items: center;
+  color: brown ;
+  font-size:xx-large;
+}
+.about h2{
+  align-items: center;
+  font-size: medium;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/*EXPERIANCE*/
+.experiance
+{
+  text-align: center;
+  margin-left: 200px;
+  margin-top: 500px;
+ 
+  color: blue;
+}
+.experiance h1
+{
+  align-items: center;
+  color: brown ;
+  font-size: xx-large;
+}
+.experiance h2
+{
+  align-items: center;
+  font-size: medium;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.experiance h3
+{
+  align-items: center;
+  font-size: small;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.experiance h4
+{
+  align-items: center;
+  font-size: x-small;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*PROJECTS*/
+.projects
+{
+  text-align: center;
+  margin-left: 200px;
+  margin-top: 500px;
+  
+  color: blue;
+}
+.projects video{
+  width: 400px;
+  height: 250px;
+  
+  display:inline-flex;
+}
+.projects h1
+{
+  align-items: center;
+  color: brown;
+  font-size: large;
+}
+.projects h2
+{
+  align-items: center;
+  font-size: medium;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.projects h3
+{
+  align-items: center;
+  font-size: small;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*EDUCATION*/
+.education{
+  text-align: center;
+  margin-left: 200px;
+  margin-top: 500px;
+ 
+  color: blue;
+}
+.education table{
+  border: 1px solid black;
+  text-align: center;
+  align-items: center;
+  padding: 20px;
+  margin-left: 250px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.education h1
+{
+  align-items: center;
+  color:brown ;
+  font-size: large;
+}
+
+/*SKILLS*/
+.skills{
+  text-align: center;
+  margin-left: 200px;
+  margin-top: 500px;
+  
+  color: blue;
+}
+.skills h1
+{
+  align-items: center;
+  color:brown ;
+  font-size: large;
+}
+.skills h2
+{
+  align-items: center;
+  font-size: medium;
+  display: flex;
+
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/*INTEREST*/
+.interest{
+  text-align: center;
+  margin-left: 200px;
+  margin-top: 500px;
+ 
+  color: blue;
+}
+.interest h1
+{
+  align-items: center;
+  color:aqua ;
+  font-size: large;
+}
+.interest h2
+{
+  align-items: center;
+  font-size: medium;
+  display: flex;
+  margin-left: 30px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/*AWARDS*/
+.awards{
+  text-align: center;
+  margin-left: 200px;
+  margin-top: 500px;
+  
+  color: blue;
+}
+.awards h1
+{
+  align-items: center;
+  color:brown ;
+  font-size: large;
+}
+.awards h2
+{
+  align-items: center;
+  font-size: medium;
+  display: flex;
+
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../dist/output.css">
+    <title>API</title>
+</head>
+
+<body>
+    <div class="m-20 pt-20">
+        <h1>Web Fetch API's</h1>
+        <table aria-label="" class="table-bordered border-2 border-black">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody id="result">
+
+            </tbody>
+        </table>
+    </div>
+
+    <script type="text/javascript">
+        getJsonData();
+        async function getJsonData() {
+            var myFileObj = await fetch("products.json");
+            var myData = await myFileObj.json();
+            console.log(myData.products);
+
+            for (var i = 0; i < myData.length; i++) {
+                myData += "<tr><td>" + myData[i].Name + "</td><td>" + myData[i].Price + "</td><td>" + myData[i].Location + "</td></tr>";
+            }
+            myproduct = JSON.stringify(myData['products']);
+            document.getElementById("result").innerHTML = myproduct;
+        }
+        
+    </script>
+</body>
+
+</html>

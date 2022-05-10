@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../dist/output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>JS-Practice=11</title>
+</head>
+
+<body class="bg-gray-400">
+    <div class="mt-36 border-4 bg-sky-500 shadow-2xl"> 
+
+    <h2 class="text-2xl ml-96">JavaScript Callbacks</h2>
+
+
+
+    <p id="demo"></p>
+    </div>
+
+    <script>
+        function myDisplayer(something) {
+            document.getElementById("demo").innerHTML = something;
+        }
+
+        function myCalculator(num1, num2, myCallback) {
+            let sum = num1 * num2;
+            myCallback(sum);
+        }
+
+        myCalculator(5, 5, myDisplayer);
+    </script>
+
+
+
+</body>
+
+</html>

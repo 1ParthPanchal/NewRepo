@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.tailwindcss.com"></script>
+<title>Document</title>
+</head>
+
+<body class="bg-blue">
+    <form enctype="multipart/form-data" action="" method="post">
+        <button type="submit" name="submit" id="Submit" value="click" onClick = getEarnings()>Click </button>
+    </form>
+    
+    <table >
+      <th>
+        <tr>
+            <th>Product Name</th>
+            <th>Product Price</th>
+            <th>Product Location</th>
+           
+        </tr>
+      </th>
+      <tbody id="myData"></tbody>
+    </table>
+    
+    <script>
+    /* function getEarnings() { */
+        fetch('API.json')
+          .then(res => res.json())
+          .then((Products) =>
+             {
+                alert("I am here"); // I can't see it if from function
+                var i;
+                var data = "";
+                for ( i = 0; i < Products.length; i++)
+                 {
+                    
+                    
+                    data += "<tr><td>" + Products.products[i].Name + "</td>" +
+                    "<td>" + Products.products[i].Price + "</td>" +
+                    "<td>" + Products.products[i].Location + "</td></tr>"
+                    
+                 };
+                 document.getElementById("myData").innerHTML = data;
+             })
+          
+    /* } */
+    </script>
+    javascript
+    json
+    fetch()
+</body>
+
+</html>
