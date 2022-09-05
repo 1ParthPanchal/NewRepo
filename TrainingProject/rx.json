@@ -1,0 +1,8 @@
+
+{
+  "sessionName": "TrainingProject",
+  "title": "pharmeasy",
+  "API": "dotnet",
+  "FrontEnd": "angular",
+  "Database": "sql"
+}

@@ -1,0 +1,175 @@
+.header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-left: 5%;
+}
+
+a.header2::before {
+    content: ">";
+}
+
+.header2 {
+    text-transform: capitalize;
+    color: #4f585e;
+    font-size: 12px;
+    line-height: 1.5;
+    max-width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.content_container {
+    display: flex;
+    padding-left: 5%;
+}
+
+.content1 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.content2 {
+    font-weight: 400;
+    color: #4b4b4b;
+    line-height: 1.5;
+}
+
+.content3 {
+    background: transparent;
+    font-weight: 700;
+    color: #10847e;
+}
+
+.content4 {
+    font-weight: 700;
+    color: #4b4b4b;
+}
+
+.content5 {
+    font-weight: 700;
+    color: #4b4b4b;
+}
+
+.menu1 {
+    display: flex;
+    background: #fff;
+    align-items: center;
+    padding-left: 5%;
+}
+
+.menu2 {
+    background: #3bb896;
+    border-color: #3bb896;
+    color: #fff;
+    font-weight: 700;
+    border: 1px solid #dfe3e6;
+    border-radius: 30px;
+    padding: 5px 15px;
+    color: #4f585e;
+    margin-right: 15px;
+    text-transform: capitalize;
+}
+
+.menu3 {
+    border: 1px solid #dfe3e6;
+    border-radius: 30px;
+    padding: 5px 15px;
+    color: #4f585e;
+    margin-right: 15px;
+    text-transform: capitalize;
+}
+
+@media (max-width:1023px) {
+    .offercontainer {
+        flex-direction: column;
+    }
+}
+
+.offercontainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 45px;
+}
+
+.offercontainer1 {
+    height: 191px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    border: 1px solid #dfe3e6;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0/8%);
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.offercontainer2 {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.OffersCard_lhs__3UNQy {
+    display: flex;
+    align-items: flex-start;
+    flex: 1 1;
+    padding: 15px 15px 30px;
+    margin-right: 20px;
+    max-width: 600px;
+}
+
+.OffersCard_offerInnerContainer__3Ga2X {
+    text-align: left;
+    flex: 1 1;
+}
+
+.OffersCard_lineClampContainer__32v3m {
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.OffersCard_title__1CZHB {
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.OffersCard_discountDetails__23dMG {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-size: 14px;
+    color: #4f585e;
+    text-overflow: ellipsis;
+    line-height: 1.5;
+    max-height: 40px;
+    height: 40px;
+}
+
+.OffersCard_footer__2c6EI {
+    border-top: 1px pashed #dfe3e6;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.OffersCard_code__2w1-k {
+    font-size: 14px;
+}
+
+.OffersCard_copy__Hio5N {
+    display: flex;
+    align-items: center;
+    color: #10847e;
+    font-weight: 700;
+}

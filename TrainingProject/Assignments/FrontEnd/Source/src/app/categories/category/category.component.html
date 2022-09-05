@@ -1,0 +1,291 @@
+<div class="container mt-4">
+    <div class="row">
+        <!-- <div class="col-4" *ngFor="let category of categories;let i=index"> -->
+        <div class="col-4 " *ngFor="let category of categories">
+            <div class="col-sm  ">
+                <div class="card mt-4 " style="width: 22rem;height: 23rem;">
+                    <img class="card-img-top-fluid rounded-top shadow-lg " src={{category.cat_Images}} alt="Card image cap" style="width: 22rem; height:10rem ; margin-top: 1%;">
+                    <div class="card-body">
+                        <h3 class="card-title">{{category.cat_Name}}</h3>
+                        <p class="card-text"> Hand-wash is a habit of sanitation and personal hygiene.</p>
+                        <a [routerLink]="[category.cat_Id]" routerLinkActive="active" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="col-sm" *ngIf="i==1">
+                <div class="card" style="width: 22rem;">
+                    <img class="card-img-top-fluid" src={{category.cat_Images}} alt="Card image cap">
+                    <div class="card-body">
+                        <h3 class="card-title">{{category.cat_Name}}</h3>
+                        <p class="card-text">I secretly eat Horlicks while at home.</p>
+                        <a [routerLink]="['../peronal-care/',[category.cat_Id]]" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm" *ngIf="i==2">
+                <div class="card" style="width: 22rem;">
+                    <img class="card-img-top" src={{category.cat_Images}} alt="Card image cap">
+                    <div class="card-body">
+                        <h3 class="card-title">{{category.cat_Name}}</h3>
+                        <p class="card-text">Drape a warm, dry cloth over your head while you’re sitting upright or standing.</p>
+                        <a [routerLink]="['../Health-Food/',[category.cat_Id]]" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div> -->
+    </div>
+
+</div>
+<router-outlet></router-outlet>
+<!-- <div class="container">
+        <div class="row">
+            <div class="col-4" *ngFor="let category of categories;let i=index">
+                <div class="col-sm" *ngIf="i==3">
+                    <div class="card" style="width:22rem;">
+                        <img class="card-img-top" src={{category.cat_Images}} alt="Card image cap">
+                        <div class="card-body">
+                            <h3 class="card-title">{{category.cat_Name}}</h3>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a [routerLink]="['../Beauty/',[category.cat_Id]]" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm" *ngIf="i==4">
+                    <div class="card" style="width: 22rem;">
+                        <img class="card-img-top" src={{category.cat_Images}} alt="Card image cap">
+                        <div class="card-body">
+                            <h3 class="card-title">{{category.cat_Name}}</h3>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a [routerLink]="['../skin-care/',[category.cat_Id]]" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm" *ngIf="i==5">
+                    <div class="card" style="width:22rem;">
+                        <img class="card-img-top" src={{category.cat_Images}} alt="Card image cap">
+                        <div class="card-body">
+                            <h3 class="card-title">{{category.cat_Name}}</h3>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a [routerLink]="['../Home-Care/',[category.cat_Id]]" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-4" *ngFor="let category of categories;let i=index">
+                <div class="col-sm" *ngIf="i==6">
+                    <div class="card" style="width: 22rem;">
+                        <img class="card-img-top" src={{category.cat_Images}} alt="Card image cap">
+                        <div class="card-body">
+                            <h3 class="card-title">{{category.cat_Name}}</h3>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a [routerLink]="['../ayurvedic-care/',[category.cat_Id]]" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm" *ngIf="i==7">
+                    <div class="card" style="width: 22rem;">
+                        <img class="card-img-top" src={{category.cat_Images}} alt="Card image cap">
+                        <div class="card-body">
+                            <h3 class="card-title">{{category.cat_Name}}</h3>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a [routerLink]="['../sexual/',[category.cat_Id]]" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm" *ngIf="i==8">
+                    <div class="card" style="width: 22rem;">
+                        <img class="card-img-top" src={{category.cat_Images}} alt="Card image cap">
+                        <div class="card-body">
+                            <h3 class="card-title">{{category.cat_Name}}</h3>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a [routerLink]="['../fitness/',[category.cat_Id]]" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-4" *ngFor="let category of categories;let i=index">
+                    <div class="col-sm" *ngIf="i==9">
+                        <div class="card" style="width: 22rem;">
+                            <img class="card-img-top" src={{category.cat_Images}} alt="Card image cap">
+                            <div class="card-body">
+                                <h3 class="card-title">{{category.cat_Name}}</h3>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a [routerLink]="['../mother/',[category.cat_Id]]" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm" *ngIf="i==10">
+                        <div class="card" style="width: 22rem;">
+                            <img class="card-img-top" src={{category.cat_Images}} alt="Card image cap">
+                            <div class="card-body">
+                                <h3 class="card-title">{{category.cat_Name}}</h3>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a [routerLink]="['../health_care/',[category.cat_Id]]" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm" *ngIf="i==11">
+                        <div class="card" style="width: 22rem;">
+                            <img class="card-img-top" src={{category.cat_Images}} alt="Card image cap">
+                            <div class="card-body">
+                                <h3 class="card-title">{{category.cat_Name}}</h3>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a [routerLink]="['../Health-condition/',[category.cat_Id]]" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-4" *ngFor="let category of categories;let i=index">
+                        <div class="col-sm" *ngIf="i==12">
+                            <div class="card" style="width: 22rem;">
+                                <img class="card-img-top" src={{category.cat_Images}} alt="Card image cap">
+                                <div class="card-body">
+                                    <h3 class="card-title">{{category.cat_Name}}</h3>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a [routerLink]="['../diabetic/',[category.cat_Id]]" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm" *ngIf="i==13">
+                            <div class="card" style="width: 22rem;">
+                                <img class="card-img-top" src={{category.cat_Images}} alt="Card image cap">
+                                <div class="card-body">
+                                    <h3 class="card-title">{{category.cat_Name}}</h3>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a [routerLink]="['../eldery/',[category.cat_Id]]" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm" *ngIf="i==14">
+                            <div class="card" style="width: 22rem;">
+                                <img class="card-img-top" src={{category.cat_Images}} alt="Card image cap">
+                                <div class="card-body">
+                                    <h3 class="card-title">{{category.cat_Name}}</h3>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a [routerLink]="['../Accesories/',[category.cat_Id]]" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4" *ngFor="let category of categories;let i=index">
+                            <div class="col-sm" *ngIf="i==15">
+                                <div class="card" style="width: 22rem;">
+                                    <img class="card-img-top" src={{category.cat_Images}} alt="Card image cap">
+                                    <div class="card-body">
+                                        <h3 class="card-title">{{category.cat_Name}}</h3>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <a [routerLink]="['../top/',[category.cat_Id]]" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm" *ngIf="i==16">
+                                <div class="card" style="width: 22rem;">
+                                    <img class="card-img-top" src={{category.cat_Images}} alt="Card image cap">
+                                    <div class="card-body">
+                                        <h3 class="card-title">{{category.cat_Name}}</h3>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <a [routerLink]="['../sandpuppy',[category.cat_Id]]" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm" *ngIf="i==17">
+                                <div class="card" style="width: 22rem;">
+                                    <img class="card-img-top" src={{category.cat_Images}} alt="Card image cap">
+                                    <div class="card-body">
+                                        <h3 class="card-title">{{category.cat_Name}}</h3>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <a [routerLink]="['../vicks',[category.cat_Id]]" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+<!-- <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalLong">
+    <em class="fa fa-user"></em>   Login/Signup
+</button>
+
+<div class="container">
+    <div class="row align-items-start">
+        <div class="col">
+            <img src="../../assets/f-1.jpg" alt="">
+        </div>
+        <div class="col">
+            <img src="../../assets/f-2.jpg" alt="">
+        </div>
+        <div class="col">
+            <img src="../../assets/f-3.jpg" alt="">
+        </div>
+    </div>
+    <div class="row align-items-center">
+        <div class="col">
+            <img src="../../assets/f-4.jpg" alt="">
+        </div>
+        <div class="col">
+            <img src="../../assets/f-5.jpg" alt="">
+        </div>
+        <div class="col">
+            <img src="../../assets/f-6.jpg" alt="">
+        </div>
+    </div>
+    <div class="row align-items-end">
+        <div class="col">
+            <img src="../../assets/f-7.jpg" alt="">
+        </div>
+        <div class="col">
+            <img src="../../assets/f-8.jpg" alt="">
+        </div>
+        <div class="col">
+            <img src="../../assets/f-9.jpg" alt="">
+        </div>
+    </div>
+</div> -->
+<!--Modal  -->
+<!-- <div class="modal " id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" aria-label="Close">close</button>
+                <div class="col-lg-2 d-flex">
+                    <img src="./assets/logo1.png" alt="" width="150" height="75">
+                </div>
+                <a>Quick Login / Register</a>
+
+            </div>
+            <div class="modal-body">
+
+                <div class>
+
+                    <input type="number" placeholder="Enter Mobile Number">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal">Send OTP</button>
+
+            </div>
+            <div class="modal-body">
+                <h3>By clicking continue, you agree with our <a href="#">Privacy Policy</a></h3>
+
+            </div>
+        </div>
+    </div>
+</div>-->

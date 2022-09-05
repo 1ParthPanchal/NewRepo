@@ -1,0 +1,295 @@
+.content_container {
+    display: flex;
+    padding-left: 13%;
+}
+
+.scrollable-menu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-left: 14%;
+}
+
+a.header2::before {
+    content: ">";
+}
+
+.header2 {
+    text-transform: capitalize;
+    color: #4f585e;
+    font-size: 12px;
+    line-height: 1.5;
+    max-width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.PDPDesktop_pdpProductUnit__3Ts9G {
+    display: flex;
+    width: 100%;
+    margin: 25px 0;
+}
+
+.PDPDesktop_pdpImgGallery__3Tc_T {
+    width: 270px;
+    margin-right: 20px;
+    position: relative;
+}
+
+.ProductImageCarousel_bigImageContainer__3vftt {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+}
+
+.ProductImageCarousel_swiperContainer__W-QsP {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.swiper-container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+}
+
+.ProductImageCarousel_swiperContainer__W-QsP {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.swiper-container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+}
+
+element.style {
+    transform: translate3d(0px, 0px, 0px);
+}
+
+.swiper-container-android .swiper-slide,
+.swiper-wrapper {
+    transform: translateZ(0);
+}
+
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+}
+
+.swiper-wrapper {
+    transform: translateZ(0);
+}
+
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+}
+
+element.style {
+    width: 270px;
+    margin-right: 15px;
+}
+
+.ProductImageCarousel_productImageContainer__2p65F.ProductImageCarousel_onlyImage__2eXVL {
+    width: 270px;
+}
+
+.ProductImageCarousel_productImageContainer__2p65F {
+    border: 1px solid #dfe3e6;
+    border-radius: 6px;
+    position: relative;
+    height: 270px;
+    width: 270px;
+    overflow: hidden;
+    display: flex;
+    padding: 15px;
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+}
+
+.ProductImageCarousel_productImageContainer__2p65F {
+    border: 1px solid #dfe3e6;
+    border-radius: 6px;
+    position: relative;
+    height: 270px;
+    width: 270px;
+    overflow: hidden;
+    display: flex;
+    padding: 15px;
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+}
+
+.ClickableElement_clickable__3o0IV.ClickableElement_clickable__3o0IV.ClickableElement_clickable__3o0IV {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.ProductImageCarousel_healthcareProductImage__23_3m,
+.ProductImageCarousel_productImage__pZs-_ {
+    max-width: 100%;
+    max-height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.LCPImage_imgContainer__1a-oJ {
+    background: #fff;
+}
+
+.ProductImageCarousel_healthcareProductImage__23_3m,
+.ProductImageCarousel_productImage__pZs-_ {
+    max-width: 100%;
+    max-height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.LCPImage_imgContainer__1a-oJ {
+    background: #fff;
+}
+
+.ProductImageCarousel_swiperPaginationCustom__2IZwL {
+    text-align: center;
+    transition: opacity .3s;
+    transform: translateZ(0);
+    z-index: 10;
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% + 10px);
+}
+
+.swiper-pagination-lock {
+    display: none;
+}
+
+.ProductImageCarousel_swiperPaginationActive__3YrAj.ProductImageCarousel_swiperPaginationActive__3YrAj {
+    border: 1px solid #8897a2;
+    border-radius: 6px;
+}
+
+.ProductImageCarousel_swiperPaginationBullet__1khD-.ProductImageCarousel_swiperPaginationBullet__1khD- {
+    width: 60px;
+    height: 60px;
+    opacity: 1;
+    cursor: pointer;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: 60px;
+    border: 1px solid #dfe3e6;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 10px 10px 0 0;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.ProductImageCarousel_swiperPaginationBullet__1khD-.ProductImageCarousel_swiperPaginationBullet__1khD- img {
+    max-height: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.ClickableElement_clickable__3o0IV.ClickableElement_clickable__3o0IV.ClickableElement_clickable__3o0IV {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.ClickableElement_clickable__3o0IV.ClickableElement_clickable__3o0IV.ClickableElement_clickable__3o0IV {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.ProductImageCarousel_shareContainer__rF7sn {
+    position: absolute;
+    z-index: 100;
+    right: 15px;
+    top: 255px;
+    transform: translateY(-100%);
+}
+
+.ShareProduct_container__9fsOP {
+    display: inline-flex;
+}
+
+.ProductImageCarousel_shareContainer__rF7sn {
+    position: absolute;
+    z-index: 100;
+    right: 15px;
+    top: 255px;
+    transform: translateY(-100%);
+}
+
+.ShareProduct_container__9fsOP {
+    display: inline-flex;
+}
+
+.PDPDesktop_returnText__2yWzj {
+    padding-top: 20px;
+    font-size: 10px;
+    line-height: 1.5;
+    color: #8897a2;
+}
+
+.PDPDesktop_returnpolicy__1XVgn {
+    color: #10847e;
+    font-size: 10px;
+    margin-left: 10px;
+}

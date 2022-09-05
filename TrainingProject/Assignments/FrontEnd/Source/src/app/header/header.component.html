@@ -1,0 +1,148 @@
+<nav class="navbar navbar-expand-sm  p-0 navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="container-fluid" style="margin-top: 2%;">
+            <div class="row1 d-flex ">
+                <div class="col-lg-2 d-flex">
+                    <img routerLink="body" src="./assets/logo1.png" alt="" width="150" height="75">
+
+                </div>
+                <div class="col-lg-8">
+                    <div class="search-container  d-flex">
+
+                        <select type="button" name="cars" id="cars" style="background-color: rgb(0deg, #ff934b 0%, #ff5e62 100%);">
+                                <option value="" >Select Pincode</option>
+                              <option value="388001">388001</option>
+                              <option value="382415">382415</option>
+                              <option value="362730">362730</option>
+                              <option value="391810">391810</option>
+                            </select>
+                        <br><br>
+
+
+                        <!-- <div class="dropdown">
+                            <button class="btn  dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Pincode</button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">388001</a>
+                                <a class="dropdown-item">382415</a>
+                                <a class="dropdown-item">362730</a>
+                                <a class="dropdown-item">385001</a>
+                                <a class="dropdown-item">391810</a>
+                                <a class="dropdown-item">380060</a>
+                                <a class="dropdown-item">387001</a>
+                                <a class="dropdown-item">391110</a>
+                                <a class="dropdown-item">360490</a>
+                                <a class="dropdown-item">392150</a>
+                            </div>
+
+                        </div> -->
+
+                        <input class="w-100" type="text" placeholder="Search Medicines/HealthCares Products @18% off" [(ngModel)]="searchedKeyword" name="search">
+                        <button type="submit"><strong><em class="fa fa-search"></em> Search</strong></button>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="row2 d-flex">
+
+                <div class="col-6 p-0 .d-none .d-sm-block" style="margin-left: 16%;">
+                    <div class="collapse navbar-collapse text-white" id="navbarNav">
+                        <ul class="navbar-nav text-white">
+                            <li class="nav-item px-2">
+                                <a [routerLink]="['/dashboard']" class="nav-link active text-white" (click)="check(phoneNumber)">Dashboard</a>
+                            </li>
+                            <li class="nav-item px-2 ">
+                                <a [routerLink]="[ '/post'] " class="nav-link text-white ">Post</a>
+                                <!-- <a onclick="myFunction() " class="nav-link text-white ">Post</a> -->
+                            </li>
+                            <li class="nav-item px-2 ">
+                                <a [routerLink]="[ '/categories'] " class="nav-link text-white ">Categories</a>
+                            </li>
+                            <li class="nav-item px-2 ">
+                                <a [routerLink]="[ '../user'] " class="nav-link text-white me-5 ">Users</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-6 d-flex ">
+                    <div class="nav-item px-2 ">
+                        <a [routerLink]="['offers']" class="nav-link text-white ms-5 "><em class="fa fa-badge-percent "></em> Offers</a>
+                    </div>
+
+                    <!-- Button trigger modal -->
+                    <!-- Button trigger modal -->
+
+                    <!-- Button trigger modal -->
+
+                    <a type="button" class="text-white" data-toggle="modal" data-target="#exampleModalLong">
+                        <em class="fa fa-user "></em> Login/Signup
+                    </a>
+
+                    <!--Modal  -->
+                    <div class="modal rounded" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content ">
+                                <div>
+
+                                    <img src="../../assets/logo.png" alt="" width="100% " height="50%" class="rounded">
+                                </div>
+                                <div class="modal-header border-0 ">
+
+                                    <!-- <button type="button" #closebutton class="close" data-dismiss="modal">&times;</button> -->
+
+                                    <a class="font-weight-bold">Quick Login / Register</a>
+
+
+                                    <!-- <ng-otp-input (onInputChange)="onOtpChange($event) " [config]="{length:5} "></ng-otp-input> -->
+                                </div>
+
+                                <div class="modal-body">
+                                    <span><h3>{{msg}}</h3></span>
+
+                                    <div class="d-flex ">
+
+                                        <input [(ngModel)]="phoneNumber" class="get-input" placeholder="Enter Phonenumber" type="tel">
+
+                                        <button (click)="sendOtp()" type="submit" class="button-press">Get OTP</button>
+                                    </div>
+                                    <br>
+                                    <div id="sign-in-button"></div>
+                                    <div class="recpatch-container"></div>
+                                    <div class="
+                                    justify-content-center 
+                                    ">
+                                        <input [(ngModel)]="otp" class="get-input" type="number" placeholder="enter OTP">
+
+                                        <button (click)="signIn()" type="submit" class="button-press">Sign In</button>
+                                    </div>
+                                    <div *ngIf="confirmationResult">
+
+                                    </div>
+                                    <!-- <div class="d-flex justify-content-center mw-100%">-->
+                                    <!-- <button class=”button-press”>Get OTP</button> -->
+                                    <!-- <button (click)="sendOtp()" type="submit" class="button-press">Get OTP</button>
+                                    </div>  -->
+
+
+
+                                    <h6>By clicking continue, you agree with our <a href="#">Privacy Policy</a></h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="nav-item px-2 ">
+                        <a href="#login.components.html " class="nav-link text-white "><em class="fa fa-user "></em> Login/Signup</a>
+                    </div> -->
+                    <div class="nav-item px-2 ">
+                        <a [routerLink]="[ '/cart'] " class="nav-link text-white "><em class="fa-solid fa-cart-shopping-fast "></em> Cart</a>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+</nav>

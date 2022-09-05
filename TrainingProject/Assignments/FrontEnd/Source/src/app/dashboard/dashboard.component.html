@@ -1,0 +1,236 @@
+<body>
+
+    <section class="pb-5 header ">
+        <div class="container py-5 text-center shadow ">
+            <header class="py-5">
+
+                <h1 class="display-4">Admin Panel </h1>
+                <p class="font-italic mb-1">Use bootstrap button variants to create call to action buttons inside a table, that's just for design, I'm sure you can make them work.</p>
+
+            </header>
+
+
+            <!-- <div>
+                <div class=""> -->
+            <div class="card border-0 shadow">
+                <!-- <div class="card-body col-lg-12 p-5"> -->
+
+                <!-- Responsive table -->
+                <div class="table-responsive col-lg-12 shadow">
+                    <form [formGroup]="adminForm" (submit)="submitdata()">
+
+                        <h1 class="card text-white  bg-dark ">ADMIN</h1>
+                        <div formGroupName="admin" class="text-black">
+                            <h3>ADMIN Details</h3><br>
+                            <div class="d-flex">
+                                <label for=" ">FirstName</label>
+                                <input type="text " formControlName="FirstName" class="card " /> <br />
+                                <label for=" ">MiddelName</label>
+                                <input type="text " formControlName="MiddelName" class="card " /> <br />
+                                <label for=" ">LastName</label>
+                                <input type="text " formControlName="LastName" class="card " />
+                            </div>
+                            <br />
+                        </div>
+                        <div formGroupName="company" class="text-black">
+                            <h3>Compnay Details</h3><br>
+                            <div class="d-flex">
+                                <label for=" ">Comapny Name</label>
+                                <input type="text" formControlName="company_name" class="card "><br />
+                                <label for=" ">Comapny Address</label>
+                                <input type="text " formControlName="company_address" class="card "><br />
+                                <label for=" ">Comapny GSTNO</label>
+                                <input type="text " formControlName="company_GSTNO" class="card "><br />
+                                <label for=" ">Comapny PAN</label>
+                                <input type="text " formControlName="company_pan" class="card "><br />
+                                <label for=" ">Designation</label>
+                                <input type="text " formControlName="designation" class="card "><br />
+                            </div>
+                            <br/>
+                        </div>
+
+                        <div formGroupName="bank" class="text-black">
+                            <h3>Bank Details</h3>
+                            <div class="d-flex">
+                                <label for="">IFSC Number</label>
+                                <input type="text" formControlName="ifsc" class="card"><br/>
+                                <label for="">Bank Account Number</label>
+                                <input type="text" formControlName="bank_account" class="card"><br/>
+                                <label for="">Account Number Type</label>
+                                <input type="text" formControlName="account_type" class="card"><br/>
+                                <label for="">Bank Name</label>
+                                <input type="text" formControlName="bank_name" class="card"><br/>
+                            </div>
+                        </div>
+                        <div formGroupName="crud" class="card-body border-4">
+                            <h1>CRUD</h1>
+                            <div class="d-flex">
+                                <label class=" text-black ">Category</label>
+                                <input type="text " FormControlName="Category" class="card ">
+                                <br />
+                                <label class="text-black ">Product</label>
+                                <input type="text " formControlName="Product" class="card "><br />
+                                <label class="text-black ">Product_Quentity</label>
+                                <input type="number " formControlName="Product_Quentity" class="card "><br />
+                                <label class="text-black ">Product_Price</label>
+                                <input type="number " formControlName="Product_Price" class="card "><br />
+                                <label class="text-black ">Offers</label>
+                                <input type="number " formControlName="Offers" class="card "><br />
+                            </div>
+                        </div>
+                        <button type="submit ">Add</button>
+                        <table class="text-black card ">
+                            <thead class="card-body ">
+                                <th>CRUD</th>
+                                <tr *ngFor="let items of AdminArray">
+                                    <td>Category: <br>{{items.crud.Category}}</td>
+                                    <td>Product_Name: <br>{{items.crud.Product}} </td>
+                                    <td>Product_Quantity: <br>{{items.crud.Product_Quentity}} </td>
+                                    <td>Product_Price: <br>{{items.crud.Product_Price}} </td>
+                                    <td>Offers: <br>{{items.crud.Offers}} </td>
+                                </tr>
+                                <th>ADMIN DETAILS</th>
+                                <tr *ngFor="let items of AdminArray ">
+                                    <td>FirstName: <br>{{items.admin.FirstName}} </td>
+                                    <td>MiddelName: <br>{{items.admin.MiddelName}} </td>
+                                    <td>LastName: <br>{{items.admin.LastName}} </td>
+                                </tr>
+                                <th>Company Details</th>
+                                <tr *ngFor="let items of AdminArray">
+                                    <td>company_name: <br>{{items.company.company_name}} </td>
+                                    <td>company_address: <br>{{items.company.company_address}} </td>
+                                    <td>company_GSTNO: <br>{{items.company.company_GSTNO}} </td>
+                                    <td>company_pan: <br>{{items.company.company_pan}}</td>
+                                    <td>designation: <br>{{items.company.designation}}</td>
+                                </tr>
+                                <th>Bank Details</th>
+                                <tr *ngFor="let items of AdminArray">
+                                    <td>Bank Account Number:<br>{{items.bank.bank_account}}</td>
+                                    <td>IFSC Number:<br>{{items.bank.ifsc}}</td>
+
+                                    <td>account_type : <br>{{items.bank.account_type}}</td>
+                                    <td>bank_name : <br>{{items.bank.bank_name}}</td>
+                                </tr>
+
+                            </thead>
+                        </table>
+                    </form>
+
+                    <!-- <table class="table ">
+                        <thead>
+                            <tr>
+
+                                <th>Category</th>
+                                <th>Product</th>
+                                <th>Product_Quantity</th>
+                                <th>Price</th>
+                                <th>Offers</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+
+                                <!-- <td>
+                                    <select class="dropdown scrollabled-menu " (change)="getproductbycategory($event) ">
+                                        <option *ngFor=" let category of categories; " (click)="AddCategory() " value="{{category.cat_Id}} ">{{category.cat_Name}}</option>
+                                    </select>
+                                </td>
+                                <td><select class="dropdown scrollabled-menu " (change)="getproductbycategory($event) ">
+                                    <option *ngFor=" let pro of products; " (click)="AddProducts() " value="{{pro.pr_Id}} ">{{pro.pr_Name}}</option>
+                                </select></td> -->
+                    <!-- <td><input type="text " placeholder="covid esential " [(ngModel)]="Category "></td>
+                    <td><input type="text " placeholder="PPE KIT " [(ngModel)]="Product_Name "></td>
+                    <td><input type="number " placeholder="20 " [(ngModel)]="Product_Quantity "></td>
+                    <td><input type="number " placeholder="2850 " [(ngModel)]="Price "></td>
+                    <td><input type="text " placeholder="20% off " [(ngModel)]="Offer "></td>
+                    <td>
+                        <ul class="list-inline m-0 ">
+                            <li class="list-inline-item ">
+                                <button class="btn btn-primary btn-sm rounded-0 " type="button " data-toggle="tooltip " data-placement="top " title="Add " (click)="Add() "><i class="fa fa-table "></i>Add</button>
+                            </li>
+                            <li class="list-inline-item ">
+                                <button class="btn btn-success btn-sm rounded-0 " type="button " data-toggle="tooltip " data-placement="top " title="Edit "><i class="fa fa-edit "></i>Update</button>
+                            </li>
+                            <li class="list-inline-item ">
+                                <button class="btn btn-danger btn-sm rounded-0 " type="button " data-toggle="tooltip " data-placement="top " title="Delete "><i class="fa fa-trash "></i>Delete</button>
+                            </li>
+                        </ul>
+                    </td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row ">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        <td>2500</td>
+                        <td>20% off</td>
+                        <td>
+                            <ul class="list-inline m-0 ">
+                                <li class="list-inline-item ">
+                                    <button class="btn btn-primary btn-sm rounded-0 " type="button " data-toggle="tooltip " data-placement="top " title="Add "><i class="fa fa-table "></i>Add</button>
+                                </li>
+                                <li class="list-inline-item ">
+                                    <button class="btn btn-success btn-sm rounded-0 " type="button " data-toggle="tooltip " data-placement="top " title="Edit "><i class="fa fa-edit "></i>Update</button>
+                                </li>
+                                <li class="list-inline-item ">
+                                    <button class="btn btn-danger btn-sm rounded-0 " type="button " data-toggle="tooltip " data-placement="top " title="Delete "><i class="fa fa-trash "></i>Delete</button>
+                                </li>
+                            </ul>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row ">3</th>
+                        <td>Larry</td>
+                        <td>Bird</td>
+                        <td>@twitter</td>
+                        <td>
+                            <ul class="list-inline m-0 ">
+                                <li class="list-inline-item ">
+                                    <button class="btn btn-primary btn-sm rounded-0 " type="button " data-toggle="tooltip " data-placement="top " title="Add "><i class="fa fa-table "></i>Add</button>
+                                </li>
+                                <li class="list-inline-item ">
+                                    <button class="btn btn-success btn-sm rounded-0 " type="button " data-toggle="tooltip " data-placement="top " title="Edit "><i class="fa fa-edit "></i>Update</button>
+                                </li>
+                                <li class="list-inline-item ">
+                                    <button class="btn btn-danger btn-sm rounded-0 " type="button " data-toggle="tooltip " data-placement="top " title="Delete "><i class="fa fa-trash "></i>Delete</button>
+                                </li>
+                            </ul>
+                        </td>
+
+
+                    </tr>
+                    <tr>
+                        <th scope="row ">4</th>
+                        <td>Martin</td>
+                        <td>Williams</td>
+                        <td>@Marty</td>
+                        <td>
+                            <ul class="list-inline m-0 ">
+                                <li class="list-inline-item ">
+                                    <button class="btn btn-primary btn-sm rounded-0 " type="button " data-toggle="tooltip " data-placement="top " title="Add "><i class="fa fa-table "></i>Add</button>
+                                </li>
+                                <li class="list-inline-item ">
+                                    <button class="btn btn-success btn-sm rounded-0 " type="button " data-toggle="tooltip " data-placement="top " title="Edit "><i class="fa fa-edit "></i>Update</button>
+                                </li>
+                                <li class="list-inline-item ">
+                                    <button class="btn btn-danger btn-sm rounded-0 " type="button " data-toggle="tooltip " data-placement="top " title="Delete "><i class="fa fa-trash "></i>Delete</button>
+                                </li>
+                            </ul>
+                        </td>
+
+
+                    </tr>
+                    </tbody>
+                    </table> -->
+
+                </div>
+                <!-- </div> -->
+            </div>
+            <!-- </div>
+            </div> -->
+        </div>
+    </section>
+</body>

@@ -1,0 +1,657 @@
+<div class="header" *ngfor="let cat of cate">
+    <a href="/" class="header1">Home</a>
+    <a href="" class="header2"> All products</a>
+    <a href="" class="header2">{{cat.cat_Name}}</a>
+</div>
+<div class="content_container d-flex flex-column ">
+    <h1 class="content1 ml-4">Covid-Essential Products</h1>
+    <!-- <div class="content2">
+        <span>PharmEasy is one of Indias leading online healthcare platforms that allows you to make great savings on your medicines and healthcare needs every day.From finding the prescribed medicine you need to the wellness product that is best suitable for you... </span>
+        <i role class="content3">Read More</i>
+        <p class="content4">Download the PharmEasy app today to buy medicines online with great savings.</p>
+        <p class="content5">Hurry! Avail these exclusive PharmEasy offers now. </p>
+    </div> -->
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-4" *ngFor="let pro of products;let i=index">
+            <div class="col-sm" [routerLink]="[pro.pr_Id]">
+                <div class="card mt-4" style="width: 22rem;">
+                    <img class="card-img-top" src={{pro.pr_Image}} alt="Card image cap" style="width:20rem;height:19rem;align-items: center">
+                    <div class="card-body">
+                        <h3 class="card-title">{{pro.pr_Name}}</h3>
+
+
+                        <div class="Productcard">
+                            <div class="productcard1">
+                                <span class="pricecontainer">
+                                    ₹
+                                    <!---->
+                                    {{pro.pr_Price}}
+                                </span>
+                                <span class="productcontainer1">
+                                    MRP
+                                    <del>
+                                        
+                                        ₹
+                                    <!---->
+                                    2500
+                                    </del>
+                                </span>
+                            </div>
+                            <div class="offercontainer">
+                                20
+                                <!---->
+                                % OFF
+                            </div>
+                        </div>
+                        <!-- <a [routerLink]="['../baidyanath']" class="btn btn-primary">Go somewhere</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <router-outlet></router-outlet>
+        <!-- <div class="col-sm" >
+                <div class="card" style="width: 22rem;" [routerLink]="['../Thermometer']">
+                    <img class="card-img-top" src={{pro.pr_Image}} alt="Card image cap">
+                    <div class="card-body">
+                        <h3 class="card-title">{{pro.pr_Name}}</h3>
+                        <p class="card-text">
+
+                            <div class="Productcard">
+                                <div class="productcard1">
+                                    <span class="pricecontainer">
+                                    ₹
+                                    
+                                    {{pro.pr_Price}}
+                                </span>
+                                    <span class="productcontainer1">
+                                    MRP
+                                    <del>
+                                        
+                                        ₹
+                                   
+                                    2500
+                                    </del>
+                                </span>
+                                </div>
+                                <div class="offercontainer">
+                                    20
+                                    
+                                    % OFF
+                                </div>
+                            </div>
+
+                            <!-- <a [routerLink]="['../bornvita']" class="btn btn-primary">Go somewhere</a> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm" *ngIf="i==2">
+                <div class="card" style="width: 22rem;" [routerLink]="['../Mask']">
+                    <img class="card-img-top" src={{pro.pr_Image}} alt="Card image cap">
+                    <div class="card-body">
+                        <h3 class="card-title">{{pro.pr_Name}}</h3>
+
+                        <div class="Productcard">
+                            <div class="productcard1">
+                                <span class="pricecontainer">
+                                    ₹
+                                    <!--
+                                    {{pro.pr_Price}}
+                                </span>
+                                <span class="productcontainer1">
+                                    MRP
+                                    <del>
+                                        
+                                        ₹
+                                    <!--
+                                    2500
+                                    </del>
+                                </span>
+                            </div>
+                            <div class="offercontainer">
+                                20
+                                <!--
+                                % OFF
+                            </div>
+                        </div>
+
+                        <!-- <a [routerLink]="['../dettol']" class="btn btn-primary">Go somewhere</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-4" *ngFor="let pro of products;let i=index">
+                <div class="col-sm" *ngIf="i==3">
+                    <div class="card" style="width:22rem;" [routerLink]="['../Senitizer']">
+                        <img class="card-img-top" src={{pro.pr_Image}} alt="Card image cap">
+                        <div class="card-body">
+                            <h3 class="card-title">{{pro.pr_Name}}</h3>
+
+                            <div class="Productcard">
+                                <div class="productcard1">
+                                    <span class="pricecontainer">
+                                    ₹
+                                    <!--
+                                    {{pro.pr_Price}}
+                                </span>
+                                    <span class="productcontainer1">
+                                    MRP
+                                    <del>
+                                        
+                                        ₹
+                                    <!--
+                                    2500
+                                    </del>
+                                </span>
+                                </div>
+                                <div class="offercontainer">
+                                    20
+                                    <!--
+                                    % OFF
+                                </div>
+                            </div>
+                            <!-- <a [routerLink]="['../friends']" class="btn btn-primary">Go somewhere</a> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm" *ngIf="i==4">
+                    <div class="card" style="width: 22rem;" [routerLink]="['../Vepourizer']">
+                        <img class="card-img-top" src={{pro.pr_Image}} alt="Card image cap">
+                        <div class="card-body">
+                            <h3 class="card-title">{{pro.pr_Name}}</h3>
+
+
+                            <div class="Productcard">
+                                <div class="productcard1">
+                                    <span class="pricecontainer">
+                                    ₹
+                                    <!--
+                                    {{pro.pr_Price}}
+                                </span>
+                                    <span class="productcontainer1">
+                                    MRP
+                                    <del>
+                                        
+                                        ₹
+                                    <!--
+                                    2500
+                                    </del>
+                                </span>
+                                </div>
+                                <div class="offercontainer">
+                                    20
+                                    <!--
+                                    % OFF
+                                </div>
+                            </div>
+                            <!-- <a [routerLink]="['../huggies']" class="btn btn-primary">Go somewhere</a> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm" *ngIf="i==5">
+                    <div class="card" style="width:22rem;" [routerLink]="['../vtamin_c_tablets']">
+                        <img class="card-img-top" src={{pro.pr_Image}} alt="Card image cap">
+                        <div class="card-body">
+                            <h3 class="card-title">{{pro.pr_Name}}</h3>
+
+                            <div class="Productcard">
+                                <div class="productcard1">
+                                    <span class="pricecontainer">
+                                    ₹
+                                    <!--
+                                    {{pro.pr_Price}}
+                                </span>
+                                    <span class="productcontainer1">
+                                    MRP
+                                    <del>
+                                        
+                                        ₹
+                                    <!--
+                                    2500
+                                    </del>
+                                </span>
+                                </div>
+                                <div class="offercontainer">
+                                    20
+                                    <!--
+                                    % OFF
+                                </div>
+                            </div>
+                            <!-- <a [routerLink]="['../kofol']" class="btn btn-primary">Go somewhere</a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-4" *ngFor="let pro of products;let i=index">
+                <div class="col-sm" *ngIf="i==6">
+                    <div class="card" style="width: 22rem;" [routerLink]="['../pigeon']">
+                        <img class="card-img-top" src={{pro.pr_Image}} alt="Card image cap">
+                        <div class="card-body">
+                            <h3 class="card-title">{{pro.pr_Name}}</h3>
+
+                            <div class="Productcard">
+                                <div class="productcard1">
+                                    <span class="pricecontainer">
+                                    ₹
+                                    <!--
+                                    {{pro.pr_Price}}
+                                </span>
+                                    <span class="productcontainer1">
+                                    MRP
+                                    <del>
+                                        
+                                        ₹
+                                    <!--
+                                    2500
+                                    </del>
+                                </span>
+                                </div>
+                                <div class="offercontainer">
+                                    20
+                                    <!--
+                                    % OFF
+                                </div>
+                            </div>
+                            <!-- <a [routerLink]="['../pigeon']" class="btn btn-primary">Go somewhere</a> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm" *ngIf="i==7">
+                    <div class="card" style="width: 22rem;" [routerLink]="['../sandpuppy']">
+                        <img class="card-img-top" src={{pro.pr_Image}} alt="Card image cap">
+                        <div class="card-body">
+                            <h3 class="card-title">{{pro.pr_Name}}</h3>
+
+                            <div class="Productcard">
+                                <div class="productcard1">
+                                    <span class="pricecontainer">
+                                    ₹
+                                  
+                                    {{pro.pr_Price}}
+                                </span>
+                                    <span class="productcontainer1">
+                                    MRP
+                                    <del>
+                                        
+                                        ₹
+                                
+                                    2500
+                                    </del>
+                                </span>
+                                </div>
+                                <div class="offercontainer">
+                                    20
+                                    
+                                    % OFF
+                                </div>
+                            </div>
+                          <a [routerLink]="['../sandpuppy']" class="btn btn-primary">Go somewhere</a> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm" *ngIf="i==8">
+                    <div class="card" style="width: 22rem;" [routerLink]="['../hairoil']">
+                        <img class="card-img-top" src={{pro.pr_Image}} alt="Card image cap">
+                        <div class="card-body">
+                            <h3 class="card-title">{{pro.pr_Name}}</h3>
+
+                            <div class="Productcard">
+                                <div class="productcard1">
+                                    <span class="pricecontainer">
+                                    ₹
+                                  
+                                    {{pro.pr_Price}}
+                                </span>
+                                    <span class="productcontainer1">
+                                    MRP
+                                    <del>
+                                        
+                                        ₹
+                               
+                                    2500
+                                    </del>
+                                </span>
+                                </div>
+                                <div class="offercontainer">
+                                    20
+                                  
+                                    % OFF
+                                </div>
+                            </div>
+                         <a [routerLink]="['../vicks']" class="btn btn-primary">Go somewhere</a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-4" *ngFor="let pro of products;let i=index">
+                    <div class="col-sm" *ngIf="i==9">
+                        <div class="card" style="width: 22rem;" [routerLink]="['../pigeon']">
+                            <img class="card-img-top" src={{pro.pr_Image}} alt="Card image cap">
+                            <div class="card-body">
+                                <h3 class="card-title">{{pro.pr_Name}}</h3>
+
+                                <div class="Productcard">
+                                    <div class="productcard1">
+                                        <span class="pricecontainer">
+                                    ₹
+                                
+                                    {{pro.pr_Price}}
+                                </span>
+                                        <span class="productcontainer1">
+                                    MRP
+                                    <del>
+                                        
+                                        ₹
+                                 
+                                    2500
+                                    </del>
+                                </span>
+                                    </div>
+                                    <div class="offercontainer">
+                                        20
+                                       
+                                        % OFF
+                                    </div>
+                                </div>
+                             <a [routerLink]="['../pigeon']" class="btn btn-primary">Go somewhere</a> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm" *ngIf="i==10">
+                        <div class="card" style="width: 22rem;" [routerLink]="['../sandpuppy']">
+                            <img class="card-img-top" src={{pro.pr_Image}} alt="Card image cap">
+                            <div class="card-body">
+                                <h3 class="card-title">{{pro.pr_Name}}</h3>
+
+                                <div class="Productcard">
+                                    <div class="productcard1">
+                                        <span class="pricecontainer">
+                                    ₹
+                                  
+                                    {{pro.pr_Price}}
+                                </span>
+                                        <span class="productcontainer1">
+                                    MRP
+                                    <del>
+                                        
+                                        ₹
+                                  
+                                    2500
+                                    </del>
+                                </span>
+                                    </div>
+                                    <div class="offercontainer">
+                                        20
+                                      
+                                        % OFF
+                                    </div>
+                                </div>
+                                <a [routerLink]="['../sandpuppy']" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm" *ngIf="i==11">
+                        <div class="card" style="width: 22rem;" [routerLink]="['../vicks']">
+                            <img class="card-img-top" src={{pro.pr_Image}} alt="Card image cap">
+                            <div class="card-body">
+                                <h3 class="card-title">{{pro.pr_Name}}</h3>
+
+                                <div class="Productcard">
+                                    <div class="productcard1">
+                                        <span class="pricecontainer">
+                                    ₹
+                                   
+                                    {{pro.pr_Price}}
+                                </span>
+                                        <span class="productcontainer1">
+                                    MRP
+                                    <del>
+                                        
+                                        ₹
+                                  
+                                    2500
+                                    </del>
+                                </span>
+                                    </div>
+                                    <div class="offercontainer">
+                                        20
+                                       
+                                        % OFF
+                                    </div>
+                                </div>
+                                <a [routerLink]="['../vicks']" class="btn btn-primary">Go somewhere</a> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-4" *ngFor="let pro of products;let i=index">
+                        <div class="col-sm" *ngIf="i==12">
+                            <div class="card" style="width: 22rem;" [routerLink]="['../pigeon']">
+                                <img class="card-img-top" src={{pro.pr_Image}} alt="Card image cap">
+                                <div class="card-body">
+                                    <h3 class="card-title">{{pro.pr_Name}}</h3>
+
+                                    <div class="Productcard">
+                                        <div class="productcard1">
+                                            <span class="pricecontainer">
+                                    ₹
+                                  
+                                    {{pro.pr_Price}}
+                                </span>
+                                            <span class="productcontainer1">
+                                    MRP
+                                    <del>
+                                        
+                                        ₹
+                                   
+                                    2500
+                                    </del>
+                                </span>
+                                        </div>
+                                        <div class="offercontainer">
+                                            20
+                                           
+                                            % OFF
+                                        </div>
+                                    </div>
+                                   <a [routerLink]="['../pigeon']" class="btn btn-primary">Go somewhere</a> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm" *ngIf="i==13">
+                            <div class="card" style="width: 22rem;" [routerLink]="['../sandpuppy']">
+                                <img class="card-img-top" src={{pro.pr_Image}} alt="Card image cap">
+                                <div class="card-body">
+                                    <h3 class="card-title">{{pro.pr_Name}}</h3>
+
+                                    <div class="Productcard">
+                                        <div class="productcard1">
+                                            <span class="pricecontainer">
+                                    ₹
+                                   
+                                    {{pro.pr_Price}}
+                                </span>
+                                            <span class="productcontainer1">
+                                    MRP
+                                    <del>
+                                        
+                                        ₹
+                                  
+                                    2500
+                                    </del>
+                                </span>
+                                        </div>
+                                        <div class="offercontainer">
+                                            20
+                                           
+                                            % OFF
+                                        </div>
+                                    </div>
+                                     <a [routerLink]="['../sandpuppy']" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm" *ngIf="i==14">
+                            <div class="card" style="width: 22rem;" [routerLink]="['../vicks']">
+                                <img class="card-img-top" src={{pro.pr_Image}} alt="Card image cap">
+                                <div class="card-body">
+                                    <h3 class="card-title">{{pro.pr_Name}}</h3>
+
+                                    <div class="Productcard">
+                                        <div class="productcard1">
+                                            <span class="pricecontainer">
+                                    ₹
+                                 
+                                    {{pro.pr_Price}}
+                                </span>
+                                            <span class="productcontainer1">
+                                    MRP
+                                    <del>
+                                        
+                                        ₹
+                                   
+                                    2500
+                                    </del>
+                                </span>
+                                        </div>
+                                        <div class="offercontainer">
+                                            20
+                                          
+                                            % OFF
+                                        </div>
+                                    </div>
+                                    <a [routerLink]="['../vicks']" class="btn btn-primary">Go somewhere</a> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4" *ngFor="let pro of products;let i=index">
+                            <div class="col-sm" *ngIf="i==15">
+                                <div class="card" style="width: 22rem;" [routerLink]="['../pigeon']">
+                                    <img class="card-img-top" src={{pro.pr_Image}} alt="Card image cap">
+                                    <div class="card-body">
+                                        <h3 class="card-title">{{pro.pr_Name}}</h3>
+
+                                        <div class="Productcard">
+                                            <div class="productcard1">
+                                                <span class="pricecontainer">
+                                    ₹
+                                   
+                                    {{pro.pr_Price}}
+                                </span>
+                                                <span class="productcontainer1">
+                                    MRP
+                                    <del>
+                                        
+                                        ₹
+                                  
+                                    2500
+                                    </del>
+                                </span>
+                                            </div>
+                                            <div class="offercontainer">
+                                                20
+                                                
+                                                % OFF
+                                            </div>
+                                        </div>
+                                       <a [routerLink]="['../pigeon']" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm" *ngIf="i==16">
+                                <div class="card" style="width: 22rem;" [routerLink]="['../sandpuppy']">
+                                    <img class="card-img-top" src={{pro.pr_Image}} alt="Card image cap">
+                                    <div class="card-body">
+                                        <h3 class="card-title">{{pro.pr_Name}}</h3>
+
+                                        <div class="Productcard">
+                                            <div class="productcard1">
+                                                <span class="pricecontainer">
+                                    ₹
+                                 
+                                    {{pro.pr_Price}}
+                                </span>
+                                                <span class="productcontainer1">
+                                    MRP
+                                    <del>
+                                        
+                                        ₹
+                                   
+                                    2500
+                                    </del>
+                                </span>
+                                            </div>
+                                            <div class="offercontainer">
+                                                20
+                                               
+                                                % OFF
+                                            </div>
+                                        </div>
+                                       <a [routerLink]="['../sandpuppy']" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm" *ngIf="i==17">
+                                <div class="card" style="width: 22rem;" [routerLink]="['../vicks']">
+                                    <img class="card-img-top" src={{pro.pr_Image}} alt="Card image cap">
+                                    <div class="card-body">
+                                        <h3 class="card-title">{{pro.pr_Name}}</h3>
+
+                                        <div class="Productcard">
+                                            <div class="productcard1">
+                                                <span class="pricecontainer">
+                                    ₹
+                               
+                                    {{pro.pr_Price}}
+                                </span>
+                                                <span class="productcontainer1">
+                                    MRP
+                                    <del>
+                                        
+                                        ₹
+                                 
+                                    2500
+                                    </del>
+                                </span>
+                                            </div>
+                                            <div class="offercontainer">
+                                                20
+                                             
+                                                % OFF
+                                            </div>
+                                        </div>
+                                        <a [routerLink]="['../vicks']" class="btn btn-primary">Go somewhere</a> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
