@@ -1,0 +1,77 @@
+<p>product-details-form works!</p>
+<form [formGroup]="ProductForm" (ngSubmit)="submitdata()">
+    <h3>Product Basic Details</h3><br/>
+    <div>
+        <label for="">Product Name</label>
+        <input type="text" formControlName="pname" placeholder="KeyBoard"><br/>
+        <div *ngIf="pname.invalid && pname.touched" class="text-black">
+            Product Name is required
+            <div *ngIf="pname.errors?.['required']">
+                Name is required.
+            </div>
+            <div *ngIf="pname.errors?.['minlength']">
+                Name must be at least 4 characters long.
+            </div>
+        </div>
+        <label for="">Product Category</label>
+        <input type="text" formControlName="pcategory" placeholder="Category" required><br/>
+        <div *ngIf="pcategory.invalid && pcategory.touched " class="text-black">
+            Product Categoryis required
+        </div>
+        <label for="">Product Price</label>
+        <input type="decimal" formControlName="pprice" placeholder="Price"><br/>
+        <div *ngIf="pprice.invalid && pprice.touched" class="text-black">
+            Product Price is required
+        </div>
+        <label for="">Product SKU</label>
+        <input type="text" formControlName="psku" placeholder="SKU"><br/>
+        <div *ngIf="psku.invalid && psku.touched" class="text-black">
+            Product SKU is required
+        </div>
+    </div><br/>
+    <h3>Product Dimension</h3><br/>
+    <div>
+        <label for="">Product Width & Height (cm/Inch)</label>
+        <input type="text" formControlName="prdwh" placeholder="12.10"><br/>
+        <div *ngIf="prdwh.invalid && prdwh.touched" class="text-black">
+            Feild is required
+        </div>
+        <label for="">Product Weight (gm)</label>
+        <input type="text" formControlName="prdw" placeholder="500"><br/>
+        <div *ngIf="prdw.invalid && prdw.touched" class="text-black">
+            Product Weight is required
+        </div>
+    </div><br/>
+    <h3>Product Graphics</h3><br/>
+    <div>
+        <label for="">Product ICON</label>
+        <input type="text" formControlName="prdicon"><br/>
+        <div *ngIf="prdicon.invalid && prdicon.touched" class="text-black">
+            Product ICON is required
+        </div>
+        <label for="">Product IMAGE</label>
+        <input type="text" formControlName="prdimg"><br/>
+        <div *ngIf="prdimg.invalid && prdimg.touched" class="text-black">
+            Product IMAGE is required
+        </div>
+    </div>
+
+    <button type="submit">Add</button>
+    <h3>Product Details</h3><br/>
+    <div *ngFor="let item of prdarray">
+        <p>Product Name-:{{item.pname}}</p><br/>
+        <p>Product Category-:{{item.pcategory}}</p><br>
+        <p>Product Price-:{{item.pprice}}</p><br>
+        <p>Product Icon-:{{item.prdicon}}</p><br>
+        <p>Updated Product-:</p><br>
+        <p>Deleted Product-:</p><br>
+
+    </div>
+    <div *ngFor="let pr of  Prud">
+        <p>{{pr.name}}</p>
+    </div>
+</form>
+<div *ngFor="let pr  of  Prud">
+    <div>{{pr.name}}</div>
+</div>
+<router-outlet></router-outlet>
