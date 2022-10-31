@@ -1,0 +1,2 @@
+Player Dev URL:http://player.dev.totalglobalsports.com/redirect?tokenValue=7n0sLcjIbhx4NIdcmmcpQQ==
+Login Dev URL: http://public.dev.totalglobalsports.com/auth/sign-in
